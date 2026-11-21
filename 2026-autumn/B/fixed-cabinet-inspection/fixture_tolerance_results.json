@@ -1,0 +1,97 @@
+{
+  "input_sha256": "c821ab5596169583daf910939a4c04776af766280f093dd48ce2f2c4f639f410",
+  "assumptions": "All combinations of bounded axial and lateral errors are possible. The optical axis remains normal to the plate. Bounds are illustrative, not measured.",
+  "objective": "Maximize the worst fully projected width, then maximize the minimum pixel clearance on either side.",
+  "fraction_denominator_m2": 1.08,
+  "grid_definition": "Midpoint grid on the original mechanical rectangle, tested at all four physical error-box corners.",
+  "largest_feasible_equal_half_width_m": 0.21163033650281607,
+  "cases": [
+    {
+      "axial_half_width_m": 0.0,
+      "lateral_half_width_m": 0.0,
+      "d_bounds_m": [
+        0.3,
+        0.9976612651596736
+      ],
+      "area_m2": 0.35519030703751153,
+      "mechanical_area_fraction": 0.32887991392362176,
+      "maximin": {
+        "d_command_m": 0.3,
+        "u_command_m": 0.0,
+        "tied_absolute_offset_limit_m": 0.05320508075688768,
+        "worst_width_px": 665.1075101064491,
+        "worst_edge_clearance_m": 0.05320508075688768,
+        "worst_edge_clearance_px": 147.4462449467755
+      },
+      "grid": {
+        "counts": [
+          4800,
+          3200
+        ],
+        "corner_grid_area_m2": 0.35527035937500007,
+        "absolute_area_error_m2": 8.005233748853424e-05,
+        "area_error_bound_m2": 0.0009607050807568878,
+        "classification_disagreements": 0
+      },
+      "nominal_centered_optimum_still_feasible": true
+    },
+    {
+      "axial_half_width_m": 0.01,
+      "lateral_half_width_m": 0.01,
+      "d_bounds_m": [
+        0.31,
+        0.9876612651596736
+      ],
+      "area_m2": 0.3236903756710664,
+      "mechanical_area_fraction": 0.29971331080654295,
+      "maximin": {
+        "d_command_m": 0.31,
+        "u_command_m": 0.0,
+        "tied_absolute_offset_limit_m": 0.04320508075688768,
+        "worst_width_px": 623.538290724796,
+        "worst_edge_clearance_m": 0.04320508075688768,
+        "worst_edge_clearance_px": 119.73343202567342
+      },
+      "grid": {
+        "counts": [
+          4800,
+          3200
+        ],
+        "corner_grid_area_m2": 0.32376740625000006,
+        "absolute_area_error_m2": 7.703057893365672e-05,
+        "area_error_bound_m2": 0.0009607050807568878,
+        "classification_disagreements": 0
+      },
+      "nominal_centered_optimum_still_feasible": false
+    },
+    {
+      "axial_half_width_m": 0.02,
+      "lateral_half_width_m": 0.02,
+      "d_bounds_m": [
+        0.32,
+        0.9776612651596736
+      ],
+      "area_m2": 0.29338997069090045,
+      "mechanical_area_fraction": 0.27165738026935227,
+      "maximin": {
+        "d_command_m": 0.32,
+        "u_command_m": 0.0,
+        "tied_absolute_offset_limit_m": 0.033205080756887675,
+        "worst_width_px": 586.8595677409844,
+        "worst_edge_clearance_m": 0.033205080756887675,
+        "worst_edge_clearance_px": 92.02061910457137
+      },
+      "grid": {
+        "counts": [
+          4800,
+          3200
+        ],
+        "corner_grid_area_m2": 0.29346314062500006,
+        "absolute_area_error_m2": 7.316993409961503e-05,
+        "area_error_bound_m2": 0.0009607050807568878,
+        "classification_disagreements": 0
+      },
+      "nominal_centered_optimum_still_feasible": false
+    }
+  ]
+}

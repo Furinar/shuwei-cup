@@ -1,0 +1,2189 @@
+{
+  "support_min": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "weight_profiles": {
+    "uniform": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "short_tilt": [
+      13,
+      12,
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "long_tilt": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ]
+  },
+  "design_profile": "uniform",
+  "initial_queue": [
+    "B",
+    "C",
+    "D",
+    "A",
+    "E"
+  ],
+  "evaluation": "Integer-weighted exact means. For each observed roster, select a fixed suffix by expected timely count then expected actual clearance; ties prefer keep, smaller total completion time then job IDs. Tilt scores re-use the nominal plan and report the tilt-specific optimum separately.",
+  "cases": {
+    "S2": {
+      "case": "S2",
+      "new_jobs": [],
+      "N": 5,
+      "frozen": [
+        "B",
+        "C"
+      ],
+      "candidate_orders": 6,
+      "minute_replays": 78,
+      "nominal_ties_on_primary_and_secondary": 1,
+      "plug_in_minutes": 10,
+      "fixed_orders": {
+        "keep": [
+          "B",
+          "C",
+          "D",
+          "A",
+          "E"
+        ],
+        "short_total_work": [
+          "B",
+          "C",
+          "E",
+          "D",
+          "A"
+        ],
+        "plug_in_mean": [
+          "B",
+          "C",
+          "A",
+          "E",
+          "D"
+        ],
+        "distribution": [
+          "B",
+          "C",
+          "E",
+          "A",
+          "D"
+        ]
+      },
+      "profiles": {
+        "uniform": {
+          "mean_repair_min": 10.0,
+          "refit_order": [
+            "B",
+            "C",
+            "E",
+            "A",
+            "D"
+          ],
+          "refit_ties_on_primary_and_secondary": 1,
+          "scores": {
+            "keep": {
+              "expected_k": 3.0,
+              "expected_fraction": 0.6,
+              "expected_clearing_min": 41.07692307692308,
+              "weighted_k_sum": 39,
+              "weighted_clearing_sum": 534,
+              "weight_sum": 13
+            },
+            "short_total_work": {
+              "expected_k": 3.3846153846153846,
+              "expected_fraction": 0.676923076923077,
+              "expected_clearing_min": 41.76923076923077,
+              "weighted_k_sum": 44,
+              "weighted_clearing_sum": 543,
+              "weight_sum": 13
+            },
+            "plug_in_mean": {
+              "expected_k": 3.6923076923076925,
+              "expected_fraction": 0.7384615384615385,
+              "expected_clearing_min": 44.46153846153846,
+              "weighted_k_sum": 48,
+              "weighted_clearing_sum": 578,
+              "weight_sum": 13
+            },
+            "distribution": {
+              "expected_k": 3.769230769230769,
+              "expected_fraction": 0.7538461538461538,
+              "expected_clearing_min": 44.46153846153846,
+              "weighted_k_sum": 49,
+              "weighted_clearing_sum": 578,
+              "weight_sum": 13
+            },
+            "perfect_information": {
+              "expected_k": 3.923076923076923,
+              "expected_fraction": 0.7846153846153846,
+              "expected_clearing_min": 41.84615384615385,
+              "weighted_k_sum": 51,
+              "weighted_clearing_sum": 544,
+              "weight_sum": 13
+            },
+            "refit_for_profile": {
+              "expected_k": 3.769230769230769,
+              "expected_fraction": 0.7538461538461538,
+              "expected_clearing_min": 44.46153846153846,
+              "weighted_k_sum": 49,
+              "weighted_clearing_sum": 578,
+              "weight_sum": 13
+            }
+          }
+        },
+        "short_tilt": {
+          "mean_repair_min": 8.0,
+          "refit_order": [
+            "B",
+            "C",
+            "E",
+            "A",
+            "D"
+          ],
+          "refit_ties_on_primary_and_secondary": 1,
+          "scores": {
+            "keep": {
+              "expected_k": 3.5494505494505493,
+              "expected_fraction": 0.7098901098901099,
+              "expected_clearing_min": 39.142857142857146,
+              "weighted_k_sum": 323,
+              "weighted_clearing_sum": 3562,
+              "weight_sum": 91
+            },
+            "short_total_work": {
+              "expected_k": 3.6043956043956045,
+              "expected_fraction": 0.7208791208791209,
+              "expected_clearing_min": 40.31868131868132,
+              "weighted_k_sum": 328,
+              "weighted_clearing_sum": 3669,
+              "weight_sum": 91
+            },
+            "plug_in_mean": {
+              "expected_k": 3.923076923076923,
+              "expected_fraction": 0.7846153846153846,
+              "expected_clearing_min": 44.10989010989011,
+              "weighted_k_sum": 357,
+              "weighted_clearing_sum": 4014,
+              "weight_sum": 91
+            },
+            "distribution": {
+              "expected_k": 3.934065934065934,
+              "expected_fraction": 0.7868131868131868,
+              "expected_clearing_min": 44.10989010989011,
+              "weighted_k_sum": 358,
+              "weighted_clearing_sum": 4014,
+              "weight_sum": 91
+            },
+            "perfect_information": {
+              "expected_k": 4.208791208791209,
+              "expected_fraction": 0.8417582417582418,
+              "expected_clearing_min": 39.91208791208791,
+              "weighted_k_sum": 383,
+              "weighted_clearing_sum": 3632,
+              "weight_sum": 91
+            },
+            "refit_for_profile": {
+              "expected_k": 3.934065934065934,
+              "expected_fraction": 0.7868131868131868,
+              "expected_clearing_min": 44.10989010989011,
+              "weighted_k_sum": 358,
+              "weighted_clearing_sum": 4014,
+              "weight_sum": 91
+            }
+          }
+        },
+        "long_tilt": {
+          "mean_repair_min": 12.0,
+          "refit_order": [
+            "B",
+            "C",
+            "E",
+            "A",
+            "D"
+          ],
+          "refit_ties_on_primary_and_secondary": 1,
+          "scores": {
+            "keep": {
+              "expected_k": 2.4505494505494507,
+              "expected_fraction": 0.4901098901098901,
+              "expected_clearing_min": 43.010989010989015,
+              "weighted_k_sum": 223,
+              "weighted_clearing_sum": 3914,
+              "weight_sum": 91
+            },
+            "short_total_work": {
+              "expected_k": 3.1648351648351647,
+              "expected_fraction": 0.6329670329670329,
+              "expected_clearing_min": 43.21978021978022,
+              "weighted_k_sum": 288,
+              "weighted_clearing_sum": 3933,
+              "weight_sum": 91
+            },
+            "plug_in_mean": {
+              "expected_k": 3.4615384615384617,
+              "expected_fraction": 0.6923076923076923,
+              "expected_clearing_min": 44.81318681318681,
+              "weighted_k_sum": 315,
+              "weighted_clearing_sum": 4078,
+              "weight_sum": 91
+            },
+            "distribution": {
+              "expected_k": 3.6043956043956045,
+              "expected_fraction": 0.7208791208791209,
+              "expected_clearing_min": 44.81318681318681,
+              "weighted_k_sum": 328,
+              "weighted_clearing_sum": 4078,
+              "weight_sum": 91
+            },
+            "perfect_information": {
+              "expected_k": 3.6373626373626373,
+              "expected_fraction": 0.7274725274725274,
+              "expected_clearing_min": 43.78021978021978,
+              "weighted_k_sum": 331,
+              "weighted_clearing_sum": 3984,
+              "weight_sum": 91
+            },
+            "refit_for_profile": {
+              "expected_k": 3.6043956043956045,
+              "expected_fraction": 0.7208791208791209,
+              "expected_clearing_min": 44.81318681318681,
+              "weighted_k_sum": 328,
+              "weighted_clearing_sum": 4078,
+              "weight_sum": 91
+            }
+          }
+        }
+      },
+      "by_realized_duration": [
+        {
+          "duration_min": 4,
+          "oracle_order": [
+            "B",
+            "C",
+            "D",
+            "A",
+            "E"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 5,
+              "makespan_min": 36
+            },
+            "short_total_work": {
+              "k": 4,
+              "makespan_min": 39
+            },
+            "plug_in_mean": {
+              "k": 4,
+              "makespan_min": 44
+            },
+            "distribution": {
+              "k": 4,
+              "makespan_min": 44
+            },
+            "perfect_information": {
+              "k": 5,
+              "makespan_min": 36
+            }
+          }
+        },
+        {
+          "duration_min": 5,
+          "oracle_order": [
+            "B",
+            "C",
+            "D",
+            "A",
+            "E"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 5,
+              "makespan_min": 36
+            },
+            "short_total_work": {
+              "k": 4,
+              "makespan_min": 39
+            },
+            "plug_in_mean": {
+              "k": 4,
+              "makespan_min": 44
+            },
+            "distribution": {
+              "k": 4,
+              "makespan_min": 44
+            },
+            "perfect_information": {
+              "k": 5,
+              "makespan_min": 36
+            }
+          }
+        },
+        {
+          "duration_min": 6,
+          "oracle_order": [
+            "B",
+            "C",
+            "D",
+            "A",
+            "E"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 4,
+              "makespan_min": 37
+            },
+            "short_total_work": {
+              "k": 4,
+              "makespan_min": 39
+            },
+            "plug_in_mean": {
+              "k": 4,
+              "makespan_min": 44
+            },
+            "distribution": {
+              "k": 4,
+              "makespan_min": 44
+            },
+            "perfect_information": {
+              "k": 4,
+              "makespan_min": 37
+            }
+          }
+        },
+        {
+          "duration_min": 7,
+          "oracle_order": [
+            "B",
+            "C",
+            "D",
+            "A",
+            "E"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 4,
+              "makespan_min": 38
+            },
+            "short_total_work": {
+              "k": 4,
+              "makespan_min": 39
+            },
+            "plug_in_mean": {
+              "k": 4,
+              "makespan_min": 44
+            },
+            "distribution": {
+              "k": 4,
+              "makespan_min": 44
+            },
+            "perfect_information": {
+              "k": 4,
+              "makespan_min": 38
+            }
+          }
+        },
+        {
+          "duration_min": 8,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "D",
+            "A"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 3,
+              "makespan_min": 39
+            },
+            "short_total_work": {
+              "k": 4,
+              "makespan_min": 39
+            },
+            "plug_in_mean": {
+              "k": 4,
+              "makespan_min": 44
+            },
+            "distribution": {
+              "k": 4,
+              "makespan_min": 44
+            },
+            "perfect_information": {
+              "k": 4,
+              "makespan_min": 39
+            }
+          }
+        },
+        {
+          "duration_min": 9,
+          "oracle_order": [
+            "B",
+            "C",
+            "A",
+            "E",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 3,
+              "makespan_min": 40
+            },
+            "short_total_work": {
+              "k": 3,
+              "makespan_min": 40
+            },
+            "plug_in_mean": {
+              "k": 4,
+              "makespan_min": 44
+            },
+            "distribution": {
+              "k": 4,
+              "makespan_min": 44
+            },
+            "perfect_information": {
+              "k": 4,
+              "makespan_min": 44
+            }
+          }
+        },
+        {
+          "duration_min": 10,
+          "oracle_order": [
+            "B",
+            "C",
+            "A",
+            "E",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 3,
+              "makespan_min": 41
+            },
+            "short_total_work": {
+              "k": 3,
+              "makespan_min": 41
+            },
+            "plug_in_mean": {
+              "k": 4,
+              "makespan_min": 44
+            },
+            "distribution": {
+              "k": 4,
+              "makespan_min": 44
+            },
+            "perfect_information": {
+              "k": 4,
+              "makespan_min": 44
+            }
+          }
+        },
+        {
+          "duration_min": 11,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "A",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 2,
+              "makespan_min": 42
+            },
+            "short_total_work": {
+              "k": 3,
+              "makespan_min": 42
+            },
+            "plug_in_mean": {
+              "k": 4,
+              "makespan_min": 44
+            },
+            "distribution": {
+              "k": 4,
+              "makespan_min": 44
+            },
+            "perfect_information": {
+              "k": 4,
+              "makespan_min": 44
+            }
+          }
+        },
+        {
+          "duration_min": 12,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "A",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 2,
+              "makespan_min": 43
+            },
+            "short_total_work": {
+              "k": 3,
+              "makespan_min": 43
+            },
+            "plug_in_mean": {
+              "k": 4,
+              "makespan_min": 44
+            },
+            "distribution": {
+              "k": 4,
+              "makespan_min": 44
+            },
+            "perfect_information": {
+              "k": 4,
+              "makespan_min": 44
+            }
+          }
+        },
+        {
+          "duration_min": 13,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "A",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 2,
+              "makespan_min": 44
+            },
+            "short_total_work": {
+              "k": 3,
+              "makespan_min": 44
+            },
+            "plug_in_mean": {
+              "k": 4,
+              "makespan_min": 44
+            },
+            "distribution": {
+              "k": 4,
+              "makespan_min": 44
+            },
+            "perfect_information": {
+              "k": 4,
+              "makespan_min": 44
+            }
+          }
+        },
+        {
+          "duration_min": 14,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "A",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 2,
+              "makespan_min": 45
+            },
+            "short_total_work": {
+              "k": 3,
+              "makespan_min": 45
+            },
+            "plug_in_mean": {
+              "k": 3,
+              "makespan_min": 45
+            },
+            "distribution": {
+              "k": 3,
+              "makespan_min": 45
+            },
+            "perfect_information": {
+              "k": 3,
+              "makespan_min": 45
+            }
+          }
+        },
+        {
+          "duration_min": 15,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "A",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 2,
+              "makespan_min": 46
+            },
+            "short_total_work": {
+              "k": 3,
+              "makespan_min": 46
+            },
+            "plug_in_mean": {
+              "k": 3,
+              "makespan_min": 46
+            },
+            "distribution": {
+              "k": 3,
+              "makespan_min": 46
+            },
+            "perfect_information": {
+              "k": 3,
+              "makespan_min": 46
+            }
+          }
+        },
+        {
+          "duration_min": 16,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "A",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 2,
+              "makespan_min": 47
+            },
+            "short_total_work": {
+              "k": 3,
+              "makespan_min": 47
+            },
+            "plug_in_mean": {
+              "k": 2,
+              "makespan_min": 47
+            },
+            "distribution": {
+              "k": 3,
+              "makespan_min": 47
+            },
+            "perfect_information": {
+              "k": 3,
+              "makespan_min": 47
+            }
+          }
+        }
+      ]
+    },
+    "S3": {
+      "case": "S3",
+      "new_jobs": [
+        "F"
+      ],
+      "N": 6,
+      "frozen": [
+        "B",
+        "C"
+      ],
+      "candidate_orders": 24,
+      "minute_replays": 312,
+      "nominal_ties_on_primary_and_secondary": 1,
+      "plug_in_minutes": 10,
+      "fixed_orders": {
+        "keep": [
+          "B",
+          "C",
+          "D",
+          "A",
+          "E",
+          "F"
+        ],
+        "short_total_work": [
+          "B",
+          "C",
+          "F",
+          "E",
+          "D",
+          "A"
+        ],
+        "plug_in_mean": [
+          "B",
+          "C",
+          "E",
+          "F",
+          "A",
+          "D"
+        ],
+        "distribution": [
+          "B",
+          "C",
+          "E",
+          "F",
+          "A",
+          "D"
+        ]
+      },
+      "profiles": {
+        "uniform": {
+          "mean_repair_min": 10.0,
+          "refit_order": [
+            "B",
+            "C",
+            "E",
+            "F",
+            "A",
+            "D"
+          ],
+          "refit_ties_on_primary_and_secondary": 1,
+          "scores": {
+            "keep": {
+              "expected_k": 3.0,
+              "expected_fraction": 0.5,
+              "expected_clearing_min": 44.07692307692308,
+              "weighted_k_sum": 39,
+              "weighted_clearing_sum": 573,
+              "weight_sum": 13
+            },
+            "short_total_work": {
+              "expected_k": 3.8461538461538463,
+              "expected_fraction": 0.6410256410256411,
+              "expected_clearing_min": 44.46153846153846,
+              "weighted_k_sum": 50,
+              "weighted_clearing_sum": 578,
+              "weight_sum": 13
+            },
+            "plug_in_mean": {
+              "expected_k": 4.3076923076923075,
+              "expected_fraction": 0.717948717948718,
+              "expected_clearing_min": 46.76923076923077,
+              "weighted_k_sum": 56,
+              "weighted_clearing_sum": 608,
+              "weight_sum": 13
+            },
+            "distribution": {
+              "expected_k": 4.3076923076923075,
+              "expected_fraction": 0.717948717948718,
+              "expected_clearing_min": 46.76923076923077,
+              "weighted_k_sum": 56,
+              "weighted_clearing_sum": 608,
+              "weight_sum": 13
+            },
+            "perfect_information": {
+              "expected_k": 4.3076923076923075,
+              "expected_fraction": 0.717948717948718,
+              "expected_clearing_min": 45.61538461538461,
+              "weighted_k_sum": 56,
+              "weighted_clearing_sum": 593,
+              "weight_sum": 13
+            },
+            "refit_for_profile": {
+              "expected_k": 4.3076923076923075,
+              "expected_fraction": 0.717948717948718,
+              "expected_clearing_min": 46.76923076923077,
+              "weighted_k_sum": 56,
+              "weighted_clearing_sum": 608,
+              "weight_sum": 13
+            }
+          }
+        },
+        "short_tilt": {
+          "mean_repair_min": 8.0,
+          "refit_order": [
+            "B",
+            "C",
+            "E",
+            "F",
+            "A",
+            "D"
+          ],
+          "refit_ties_on_primary_and_secondary": 1,
+          "scores": {
+            "keep": {
+              "expected_k": 3.5494505494505493,
+              "expected_fraction": 0.5915750915750916,
+              "expected_clearing_min": 42.142857142857146,
+              "weighted_k_sum": 323,
+              "weighted_clearing_sum": 3835,
+              "weight_sum": 91
+            },
+            "short_total_work": {
+              "expected_k": 4.197802197802198,
+              "expected_fraction": 0.6996336996336996,
+              "expected_clearing_min": 42.81318681318681,
+              "weighted_k_sum": 382,
+              "weighted_clearing_sum": 3896,
+              "weight_sum": 91
+            },
+            "plug_in_mean": {
+              "expected_k": 4.7032967032967035,
+              "expected_fraction": 0.7838827838827839,
+              "expected_clearing_min": 46.21978021978022,
+              "weighted_k_sum": 428,
+              "weighted_clearing_sum": 4206,
+              "weight_sum": 91
+            },
+            "distribution": {
+              "expected_k": 4.7032967032967035,
+              "expected_fraction": 0.7838827838827839,
+              "expected_clearing_min": 46.21978021978022,
+              "weighted_k_sum": 428,
+              "weighted_clearing_sum": 4206,
+              "weight_sum": 91
+            },
+            "perfect_information": {
+              "expected_k": 4.7032967032967035,
+              "expected_fraction": 0.7838827838827839,
+              "expected_clearing_min": 44.23076923076923,
+              "weighted_k_sum": 428,
+              "weighted_clearing_sum": 4025,
+              "weight_sum": 91
+            },
+            "refit_for_profile": {
+              "expected_k": 4.7032967032967035,
+              "expected_fraction": 0.7838827838827839,
+              "expected_clearing_min": 46.21978021978022,
+              "weighted_k_sum": 428,
+              "weighted_clearing_sum": 4206,
+              "weight_sum": 91
+            }
+          }
+        },
+        "long_tilt": {
+          "mean_repair_min": 12.0,
+          "refit_order": [
+            "B",
+            "C",
+            "E",
+            "F",
+            "A",
+            "D"
+          ],
+          "refit_ties_on_primary_and_secondary": 1,
+          "scores": {
+            "keep": {
+              "expected_k": 2.4505494505494507,
+              "expected_fraction": 0.4084249084249084,
+              "expected_clearing_min": 46.010989010989015,
+              "weighted_k_sum": 223,
+              "weighted_clearing_sum": 4187,
+              "weight_sum": 91
+            },
+            "short_total_work": {
+              "expected_k": 3.4945054945054945,
+              "expected_fraction": 0.5824175824175825,
+              "expected_clearing_min": 46.10989010989011,
+              "weighted_k_sum": 318,
+              "weighted_clearing_sum": 4196,
+              "weight_sum": 91
+            },
+            "plug_in_mean": {
+              "expected_k": 3.912087912087912,
+              "expected_fraction": 0.652014652014652,
+              "expected_clearing_min": 47.31868131868132,
+              "weighted_k_sum": 356,
+              "weighted_clearing_sum": 4306,
+              "weight_sum": 91
+            },
+            "distribution": {
+              "expected_k": 3.912087912087912,
+              "expected_fraction": 0.652014652014652,
+              "expected_clearing_min": 47.31868131868132,
+              "weighted_k_sum": 356,
+              "weighted_clearing_sum": 4306,
+              "weight_sum": 91
+            },
+            "perfect_information": {
+              "expected_k": 3.912087912087912,
+              "expected_fraction": 0.652014652014652,
+              "expected_clearing_min": 47.0,
+              "weighted_k_sum": 356,
+              "weighted_clearing_sum": 4277,
+              "weight_sum": 91
+            },
+            "refit_for_profile": {
+              "expected_k": 3.912087912087912,
+              "expected_fraction": 0.652014652014652,
+              "expected_clearing_min": 47.31868131868132,
+              "weighted_k_sum": 356,
+              "weighted_clearing_sum": 4306,
+              "weight_sum": 91
+            }
+          }
+        }
+      },
+      "by_realized_duration": [
+        {
+          "duration_min": 4,
+          "oracle_order": [
+            "B",
+            "C",
+            "D",
+            "A",
+            "E",
+            "F"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 5,
+              "makespan_min": 39
+            },
+            "short_total_work": {
+              "k": 5,
+              "makespan_min": 41
+            },
+            "plug_in_mean": {
+              "k": 5,
+              "makespan_min": 46
+            },
+            "distribution": {
+              "k": 5,
+              "makespan_min": 46
+            },
+            "perfect_information": {
+              "k": 5,
+              "makespan_min": 39
+            }
+          }
+        },
+        {
+          "duration_min": 5,
+          "oracle_order": [
+            "B",
+            "C",
+            "D",
+            "A",
+            "E",
+            "F"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 5,
+              "makespan_min": 39
+            },
+            "short_total_work": {
+              "k": 5,
+              "makespan_min": 41
+            },
+            "plug_in_mean": {
+              "k": 5,
+              "makespan_min": 46
+            },
+            "distribution": {
+              "k": 5,
+              "makespan_min": 46
+            },
+            "perfect_information": {
+              "k": 5,
+              "makespan_min": 39
+            }
+          }
+        },
+        {
+          "duration_min": 6,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "F",
+            "A",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 4,
+              "makespan_min": 40
+            },
+            "short_total_work": {
+              "k": 4,
+              "makespan_min": 41
+            },
+            "plug_in_mean": {
+              "k": 5,
+              "makespan_min": 46
+            },
+            "distribution": {
+              "k": 5,
+              "makespan_min": 46
+            },
+            "perfect_information": {
+              "k": 5,
+              "makespan_min": 46
+            }
+          }
+        },
+        {
+          "duration_min": 7,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "F",
+            "A",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 4,
+              "makespan_min": 41
+            },
+            "short_total_work": {
+              "k": 4,
+              "makespan_min": 41
+            },
+            "plug_in_mean": {
+              "k": 5,
+              "makespan_min": 46
+            },
+            "distribution": {
+              "k": 5,
+              "makespan_min": 46
+            },
+            "perfect_information": {
+              "k": 5,
+              "makespan_min": 46
+            }
+          }
+        },
+        {
+          "duration_min": 8,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "F",
+            "A",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 3,
+              "makespan_min": 42
+            },
+            "short_total_work": {
+              "k": 4,
+              "makespan_min": 42
+            },
+            "plug_in_mean": {
+              "k": 5,
+              "makespan_min": 46
+            },
+            "distribution": {
+              "k": 5,
+              "makespan_min": 46
+            },
+            "perfect_information": {
+              "k": 5,
+              "makespan_min": 46
+            }
+          }
+        },
+        {
+          "duration_min": 9,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "F",
+            "A",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 3,
+              "makespan_min": 43
+            },
+            "short_total_work": {
+              "k": 4,
+              "makespan_min": 43
+            },
+            "plug_in_mean": {
+              "k": 5,
+              "makespan_min": 46
+            },
+            "distribution": {
+              "k": 5,
+              "makespan_min": 46
+            },
+            "perfect_information": {
+              "k": 5,
+              "makespan_min": 46
+            }
+          }
+        },
+        {
+          "duration_min": 10,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "F",
+            "A",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 3,
+              "makespan_min": 44
+            },
+            "short_total_work": {
+              "k": 4,
+              "makespan_min": 44
+            },
+            "plug_in_mean": {
+              "k": 5,
+              "makespan_min": 46
+            },
+            "distribution": {
+              "k": 5,
+              "makespan_min": 46
+            },
+            "perfect_information": {
+              "k": 5,
+              "makespan_min": 46
+            }
+          }
+        },
+        {
+          "duration_min": 11,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "F",
+            "D",
+            "A"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 2,
+              "makespan_min": 45
+            },
+            "short_total_work": {
+              "k": 4,
+              "makespan_min": 45
+            },
+            "plug_in_mean": {
+              "k": 4,
+              "makespan_min": 46
+            },
+            "distribution": {
+              "k": 4,
+              "makespan_min": 46
+            },
+            "perfect_information": {
+              "k": 4,
+              "makespan_min": 45
+            }
+          }
+        },
+        {
+          "duration_min": 12,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "A",
+            "F",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 2,
+              "makespan_min": 46
+            },
+            "short_total_work": {
+              "k": 4,
+              "makespan_min": 46
+            },
+            "plug_in_mean": {
+              "k": 4,
+              "makespan_min": 46
+            },
+            "distribution": {
+              "k": 4,
+              "makespan_min": 46
+            },
+            "perfect_information": {
+              "k": 4,
+              "makespan_min": 46
+            }
+          }
+        },
+        {
+          "duration_min": 13,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "A",
+            "F",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 2,
+              "makespan_min": 47
+            },
+            "short_total_work": {
+              "k": 4,
+              "makespan_min": 47
+            },
+            "plug_in_mean": {
+              "k": 4,
+              "makespan_min": 47
+            },
+            "distribution": {
+              "k": 4,
+              "makespan_min": 47
+            },
+            "perfect_information": {
+              "k": 4,
+              "makespan_min": 47
+            }
+          }
+        },
+        {
+          "duration_min": 14,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "A",
+            "F",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 2,
+              "makespan_min": 48
+            },
+            "short_total_work": {
+              "k": 3,
+              "makespan_min": 48
+            },
+            "plug_in_mean": {
+              "k": 3,
+              "makespan_min": 48
+            },
+            "distribution": {
+              "k": 3,
+              "makespan_min": 48
+            },
+            "perfect_information": {
+              "k": 3,
+              "makespan_min": 48
+            }
+          }
+        },
+        {
+          "duration_min": 15,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "A",
+            "F",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 2,
+              "makespan_min": 49
+            },
+            "short_total_work": {
+              "k": 3,
+              "makespan_min": 49
+            },
+            "plug_in_mean": {
+              "k": 3,
+              "makespan_min": 49
+            },
+            "distribution": {
+              "k": 3,
+              "makespan_min": 49
+            },
+            "perfect_information": {
+              "k": 3,
+              "makespan_min": 49
+            }
+          }
+        },
+        {
+          "duration_min": 16,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "A",
+            "F",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 2,
+              "makespan_min": 50
+            },
+            "short_total_work": {
+              "k": 2,
+              "makespan_min": 50
+            },
+            "plug_in_mean": {
+              "k": 3,
+              "makespan_min": 50
+            },
+            "distribution": {
+              "k": 3,
+              "makespan_min": 50
+            },
+            "perfect_information": {
+              "k": 3,
+              "makespan_min": 50
+            }
+          }
+        }
+      ],
+      "value_tradeoff": {
+        "weight_sum": 13,
+        "intervals": [
+          {
+            "lower_v": "0",
+            "upper_v": "5/12",
+            "weighted_k_sum": 39,
+            "weighted_clearing_sum": 573,
+            "orders": [
+              [
+                "B",
+                "C",
+                "D",
+                "A",
+                "E",
+                "F"
+              ]
+            ]
+          },
+          {
+            "lower_v": "5/12",
+            "upper_v": "6",
+            "weighted_k_sum": 51,
+            "weighted_clearing_sum": 578,
+            "orders": [
+              [
+                "B",
+                "C",
+                "E",
+                "F",
+                "D",
+                "A"
+              ]
+            ]
+          },
+          {
+            "lower_v": "6",
+            "upper_v": null,
+            "weighted_k_sum": 56,
+            "weighted_clearing_sum": 608,
+            "orders": [
+              [
+                "B",
+                "C",
+                "E",
+                "F",
+                "A",
+                "D"
+              ]
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "v": "0",
+            "orders": [
+              [
+                "B",
+                "C",
+                "D",
+                "A",
+                "E",
+                "F"
+              ]
+            ]
+          },
+          {
+            "v": "5/12",
+            "orders": [
+              [
+                "B",
+                "C",
+                "D",
+                "A",
+                "E",
+                "F"
+              ],
+              [
+                "B",
+                "C",
+                "E",
+                "F",
+                "D",
+                "A"
+              ]
+            ]
+          },
+          {
+            "v": "6",
+            "orders": [
+              [
+                "B",
+                "C",
+                "E",
+                "F",
+                "A",
+                "D"
+              ],
+              [
+                "B",
+                "C",
+                "E",
+                "F",
+                "D",
+                "A"
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "S5": {
+      "case": "S5",
+      "new_jobs": [
+        "F",
+        "G"
+      ],
+      "N": 7,
+      "frozen": [
+        "B",
+        "C"
+      ],
+      "candidate_orders": 120,
+      "minute_replays": 1560,
+      "nominal_ties_on_primary_and_secondary": 2,
+      "plug_in_minutes": 10,
+      "fixed_orders": {
+        "keep": [
+          "B",
+          "C",
+          "D",
+          "A",
+          "E",
+          "F",
+          "G"
+        ],
+        "short_total_work": [
+          "B",
+          "C",
+          "F",
+          "E",
+          "G",
+          "D",
+          "A"
+        ],
+        "plug_in_mean": [
+          "B",
+          "C",
+          "E",
+          "F",
+          "A",
+          "G",
+          "D"
+        ],
+        "distribution": [
+          "B",
+          "C",
+          "E",
+          "F",
+          "A",
+          "G",
+          "D"
+        ]
+      },
+      "profiles": {
+        "uniform": {
+          "mean_repair_min": 10.0,
+          "refit_order": [
+            "B",
+            "C",
+            "E",
+            "F",
+            "A",
+            "G",
+            "D"
+          ],
+          "refit_ties_on_primary_and_secondary": 2,
+          "scores": {
+            "keep": {
+              "expected_k": 3.0,
+              "expected_fraction": 0.42857142857142855,
+              "expected_clearing_min": 50.46153846153846,
+              "weighted_k_sum": 39,
+              "weighted_clearing_sum": 656,
+              "weight_sum": 13
+            },
+            "short_total_work": {
+              "expected_k": 4.0,
+              "expected_fraction": 0.5714285714285714,
+              "expected_clearing_min": 50.23076923076923,
+              "weighted_k_sum": 52,
+              "weighted_clearing_sum": 653,
+              "weight_sum": 13
+            },
+            "plug_in_mean": {
+              "expected_k": 4.3076923076923075,
+              "expected_fraction": 0.6153846153846154,
+              "expected_clearing_min": 52.76923076923077,
+              "weighted_k_sum": 56,
+              "weighted_clearing_sum": 686,
+              "weight_sum": 13
+            },
+            "distribution": {
+              "expected_k": 4.3076923076923075,
+              "expected_fraction": 0.6153846153846154,
+              "expected_clearing_min": 52.76923076923077,
+              "weighted_k_sum": 56,
+              "weighted_clearing_sum": 686,
+              "weight_sum": 13
+            },
+            "perfect_information": {
+              "expected_k": 4.3076923076923075,
+              "expected_fraction": 0.6153846153846154,
+              "expected_clearing_min": 50.84615384615385,
+              "weighted_k_sum": 56,
+              "weighted_clearing_sum": 661,
+              "weight_sum": 13
+            },
+            "refit_for_profile": {
+              "expected_k": 4.3076923076923075,
+              "expected_fraction": 0.6153846153846154,
+              "expected_clearing_min": 52.76923076923077,
+              "weighted_k_sum": 56,
+              "weighted_clearing_sum": 686,
+              "weight_sum": 13
+            }
+          }
+        },
+        "short_tilt": {
+          "mean_repair_min": 8.0,
+          "refit_order": [
+            "B",
+            "C",
+            "E",
+            "F",
+            "A",
+            "G",
+            "D"
+          ],
+          "refit_ties_on_primary_and_secondary": 2,
+          "scores": {
+            "keep": {
+              "expected_k": 3.5494505494505493,
+              "expected_fraction": 0.5070643642072213,
+              "expected_clearing_min": 48.81318681318681,
+              "weighted_k_sum": 323,
+              "weighted_clearing_sum": 4442,
+              "weight_sum": 91
+            },
+            "short_total_work": {
+              "expected_k": 4.428571428571429,
+              "expected_fraction": 0.6326530612244898,
+              "expected_clearing_min": 48.417582417582416,
+              "weighted_k_sum": 403,
+              "weighted_clearing_sum": 4406,
+              "weight_sum": 91
+            },
+            "plug_in_mean": {
+              "expected_k": 4.7032967032967035,
+              "expected_fraction": 0.6718995290423861,
+              "expected_clearing_min": 52.21978021978022,
+              "weighted_k_sum": 428,
+              "weighted_clearing_sum": 4752,
+              "weight_sum": 91
+            },
+            "distribution": {
+              "expected_k": 4.7032967032967035,
+              "expected_fraction": 0.6718995290423861,
+              "expected_clearing_min": 52.21978021978022,
+              "weighted_k_sum": 428,
+              "weighted_clearing_sum": 4752,
+              "weight_sum": 91
+            },
+            "perfect_information": {
+              "expected_k": 4.7032967032967035,
+              "expected_fraction": 0.6718995290423861,
+              "expected_clearing_min": 49.08791208791209,
+              "weighted_k_sum": 428,
+              "weighted_clearing_sum": 4467,
+              "weight_sum": 91
+            },
+            "refit_for_profile": {
+              "expected_k": 4.7032967032967035,
+              "expected_fraction": 0.6718995290423861,
+              "expected_clearing_min": 52.21978021978022,
+              "weighted_k_sum": 428,
+              "weighted_clearing_sum": 4752,
+              "weight_sum": 91
+            }
+          }
+        },
+        "long_tilt": {
+          "mean_repair_min": 12.0,
+          "refit_order": [
+            "B",
+            "C",
+            "E",
+            "F",
+            "A",
+            "G",
+            "D"
+          ],
+          "refit_ties_on_primary_and_secondary": 2,
+          "scores": {
+            "keep": {
+              "expected_k": 2.4505494505494507,
+              "expected_fraction": 0.3500784929356358,
+              "expected_clearing_min": 52.10989010989011,
+              "weighted_k_sum": 223,
+              "weighted_clearing_sum": 4742,
+              "weight_sum": 91
+            },
+            "short_total_work": {
+              "expected_k": 3.5714285714285716,
+              "expected_fraction": 0.5102040816326531,
+              "expected_clearing_min": 52.043956043956044,
+              "weighted_k_sum": 325,
+              "weighted_clearing_sum": 4736,
+              "weight_sum": 91
+            },
+            "plug_in_mean": {
+              "expected_k": 3.912087912087912,
+              "expected_fraction": 0.5588697017268446,
+              "expected_clearing_min": 53.31868131868132,
+              "weighted_k_sum": 356,
+              "weighted_clearing_sum": 4852,
+              "weight_sum": 91
+            },
+            "distribution": {
+              "expected_k": 3.912087912087912,
+              "expected_fraction": 0.5588697017268446,
+              "expected_clearing_min": 53.31868131868132,
+              "weighted_k_sum": 356,
+              "weighted_clearing_sum": 4852,
+              "weight_sum": 91
+            },
+            "perfect_information": {
+              "expected_k": 3.912087912087912,
+              "expected_fraction": 0.5588697017268446,
+              "expected_clearing_min": 52.604395604395606,
+              "weighted_k_sum": 356,
+              "weighted_clearing_sum": 4787,
+              "weight_sum": 91
+            },
+            "refit_for_profile": {
+              "expected_k": 3.912087912087912,
+              "expected_fraction": 0.5588697017268446,
+              "expected_clearing_min": 53.31868131868132,
+              "weighted_k_sum": 356,
+              "weighted_clearing_sum": 4852,
+              "weight_sum": 91
+            }
+          }
+        }
+      },
+      "by_realized_duration": [
+        {
+          "duration_min": 4,
+          "oracle_order": [
+            "B",
+            "C",
+            "F",
+            "D",
+            "A",
+            "G",
+            "E"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 5,
+              "makespan_min": 47
+            },
+            "short_total_work": {
+              "k": 5,
+              "makespan_min": 46
+            },
+            "plug_in_mean": {
+              "k": 5,
+              "makespan_min": 52
+            },
+            "distribution": {
+              "k": 5,
+              "makespan_min": 52
+            },
+            "perfect_information": {
+              "k": 5,
+              "makespan_min": 45
+            }
+          }
+        },
+        {
+          "duration_min": 5,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "F",
+            "G",
+            "D",
+            "A"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 5,
+              "makespan_min": 47
+            },
+            "short_total_work": {
+              "k": 5,
+              "makespan_min": 46
+            },
+            "plug_in_mean": {
+              "k": 5,
+              "makespan_min": 52
+            },
+            "distribution": {
+              "k": 5,
+              "makespan_min": 52
+            },
+            "perfect_information": {
+              "k": 5,
+              "makespan_min": 46
+            }
+          }
+        },
+        {
+          "duration_min": 6,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "F",
+            "G",
+            "D",
+            "A"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 4,
+              "makespan_min": 47
+            },
+            "short_total_work": {
+              "k": 5,
+              "makespan_min": 46
+            },
+            "plug_in_mean": {
+              "k": 5,
+              "makespan_min": 52
+            },
+            "distribution": {
+              "k": 5,
+              "makespan_min": 52
+            },
+            "perfect_information": {
+              "k": 5,
+              "makespan_min": 46
+            }
+          }
+        },
+        {
+          "duration_min": 7,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "F",
+            "G",
+            "D",
+            "A"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 4,
+              "makespan_min": 47
+            },
+            "short_total_work": {
+              "k": 5,
+              "makespan_min": 47
+            },
+            "plug_in_mean": {
+              "k": 5,
+              "makespan_min": 52
+            },
+            "distribution": {
+              "k": 5,
+              "makespan_min": 52
+            },
+            "perfect_information": {
+              "k": 5,
+              "makespan_min": 47
+            }
+          }
+        },
+        {
+          "duration_min": 8,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "F",
+            "A",
+            "G",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 3,
+              "makespan_min": 48
+            },
+            "short_total_work": {
+              "k": 4,
+              "makespan_min": 48
+            },
+            "plug_in_mean": {
+              "k": 5,
+              "makespan_min": 52
+            },
+            "distribution": {
+              "k": 5,
+              "makespan_min": 52
+            },
+            "perfect_information": {
+              "k": 5,
+              "makespan_min": 52
+            }
+          }
+        },
+        {
+          "duration_min": 9,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "F",
+            "A",
+            "G",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 3,
+              "makespan_min": 49
+            },
+            "short_total_work": {
+              "k": 4,
+              "makespan_min": 49
+            },
+            "plug_in_mean": {
+              "k": 5,
+              "makespan_min": 52
+            },
+            "distribution": {
+              "k": 5,
+              "makespan_min": 52
+            },
+            "perfect_information": {
+              "k": 5,
+              "makespan_min": 52
+            }
+          }
+        },
+        {
+          "duration_min": 10,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "F",
+            "A",
+            "G",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 3,
+              "makespan_min": 50
+            },
+            "short_total_work": {
+              "k": 4,
+              "makespan_min": 50
+            },
+            "plug_in_mean": {
+              "k": 5,
+              "makespan_min": 52
+            },
+            "distribution": {
+              "k": 5,
+              "makespan_min": 52
+            },
+            "perfect_information": {
+              "k": 5,
+              "makespan_min": 52
+            }
+          }
+        },
+        {
+          "duration_min": 11,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "F",
+            "G",
+            "A",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 2,
+              "makespan_min": 51
+            },
+            "short_total_work": {
+              "k": 4,
+              "makespan_min": 51
+            },
+            "plug_in_mean": {
+              "k": 4,
+              "makespan_min": 52
+            },
+            "distribution": {
+              "k": 4,
+              "makespan_min": 52
+            },
+            "perfect_information": {
+              "k": 4,
+              "makespan_min": 51
+            }
+          }
+        },
+        {
+          "duration_min": 12,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "A",
+            "F",
+            "G",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 2,
+              "makespan_min": 52
+            },
+            "short_total_work": {
+              "k": 4,
+              "makespan_min": 52
+            },
+            "plug_in_mean": {
+              "k": 4,
+              "makespan_min": 52
+            },
+            "distribution": {
+              "k": 4,
+              "makespan_min": 52
+            },
+            "perfect_information": {
+              "k": 4,
+              "makespan_min": 52
+            }
+          }
+        },
+        {
+          "duration_min": 13,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "A",
+            "F",
+            "G",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 2,
+              "makespan_min": 53
+            },
+            "short_total_work": {
+              "k": 4,
+              "makespan_min": 53
+            },
+            "plug_in_mean": {
+              "k": 4,
+              "makespan_min": 53
+            },
+            "distribution": {
+              "k": 4,
+              "makespan_min": 53
+            },
+            "perfect_information": {
+              "k": 4,
+              "makespan_min": 53
+            }
+          }
+        },
+        {
+          "duration_min": 14,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "A",
+            "F",
+            "G",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 2,
+              "makespan_min": 54
+            },
+            "short_total_work": {
+              "k": 3,
+              "makespan_min": 54
+            },
+            "plug_in_mean": {
+              "k": 3,
+              "makespan_min": 54
+            },
+            "distribution": {
+              "k": 3,
+              "makespan_min": 54
+            },
+            "perfect_information": {
+              "k": 3,
+              "makespan_min": 54
+            }
+          }
+        },
+        {
+          "duration_min": 15,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "A",
+            "F",
+            "G",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 2,
+              "makespan_min": 55
+            },
+            "short_total_work": {
+              "k": 3,
+              "makespan_min": 55
+            },
+            "plug_in_mean": {
+              "k": 3,
+              "makespan_min": 55
+            },
+            "distribution": {
+              "k": 3,
+              "makespan_min": 55
+            },
+            "perfect_information": {
+              "k": 3,
+              "makespan_min": 55
+            }
+          }
+        },
+        {
+          "duration_min": 16,
+          "oracle_order": [
+            "B",
+            "C",
+            "E",
+            "A",
+            "F",
+            "G",
+            "D"
+          ],
+          "outcomes": {
+            "keep": {
+              "k": 2,
+              "makespan_min": 56
+            },
+            "short_total_work": {
+              "k": 2,
+              "makespan_min": 56
+            },
+            "plug_in_mean": {
+              "k": 3,
+              "makespan_min": 56
+            },
+            "distribution": {
+              "k": 3,
+              "makespan_min": 56
+            },
+            "perfect_information": {
+              "k": 3,
+              "makespan_min": 56
+            }
+          }
+        }
+      ]
+    }
+  },
+  "candidate_duration_replays": 1950
+}

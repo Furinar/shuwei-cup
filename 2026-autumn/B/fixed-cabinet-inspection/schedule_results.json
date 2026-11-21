@@ -1,0 +1,1780 @@
+{
+  "q2": {
+    "fcfs": {
+      "order": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "setup": null,
+      "jobs": [
+        {
+          "job": "A",
+          "inspect": [
+            0,
+            11
+          ],
+          "review": [
+            [
+              11,
+              14
+            ]
+          ]
+        },
+        {
+          "job": "B",
+          "inspect": [
+            11,
+            14
+          ],
+          "review": [
+            [
+              14,
+              24
+            ]
+          ]
+        },
+        {
+          "job": "C",
+          "inspect": [
+            14,
+            23
+          ],
+          "review": [
+            [
+              24,
+              29
+            ]
+          ]
+        },
+        {
+          "job": "D",
+          "inspect": [
+            23,
+            28
+          ],
+          "review": [
+            [
+              29,
+              37
+            ]
+          ]
+        },
+        {
+          "job": "E",
+          "inspect": [
+            28,
+            34
+          ],
+          "review": [
+            [
+              37,
+              39
+            ]
+          ]
+        }
+      ],
+      "makespan_min": 39,
+      "sum_completion_min": 143
+    },
+    "optimal": {
+      "order": [
+        "B",
+        "C",
+        "D",
+        "A",
+        "E"
+      ],
+      "setup": null,
+      "jobs": [
+        {
+          "job": "B",
+          "inspect": [
+            0,
+            3
+          ],
+          "review": [
+            [
+              3,
+              13
+            ]
+          ]
+        },
+        {
+          "job": "C",
+          "inspect": [
+            3,
+            12
+          ],
+          "review": [
+            [
+              13,
+              18
+            ]
+          ]
+        },
+        {
+          "job": "D",
+          "inspect": [
+            12,
+            17
+          ],
+          "review": [
+            [
+              18,
+              26
+            ]
+          ]
+        },
+        {
+          "job": "A",
+          "inspect": [
+            17,
+            28
+          ],
+          "review": [
+            [
+              28,
+              31
+            ]
+          ]
+        },
+        {
+          "job": "E",
+          "inspect": [
+            28,
+            34
+          ],
+          "review": [
+            [
+              34,
+              36
+            ]
+          ]
+        }
+      ],
+      "makespan_min": 36,
+      "sum_completion_min": 124
+    },
+    "johnson": {
+      "order": [
+        "B",
+        "D",
+        "C",
+        "A",
+        "E"
+      ],
+      "setup": null,
+      "jobs": [
+        {
+          "job": "B",
+          "inspect": [
+            0,
+            3
+          ],
+          "review": [
+            [
+              3,
+              13
+            ]
+          ]
+        },
+        {
+          "job": "D",
+          "inspect": [
+            3,
+            8
+          ],
+          "review": [
+            [
+              13,
+              21
+            ]
+          ]
+        },
+        {
+          "job": "C",
+          "inspect": [
+            8,
+            17
+          ],
+          "review": [
+            [
+              21,
+              26
+            ]
+          ]
+        },
+        {
+          "job": "A",
+          "inspect": [
+            17,
+            28
+          ],
+          "review": [
+            [
+              28,
+              31
+            ]
+          ]
+        },
+        {
+          "job": "E",
+          "inspect": [
+            28,
+            34
+          ],
+          "review": [
+            [
+              34,
+              36
+            ]
+          ]
+        }
+      ],
+      "makespan_min": 36,
+      "sum_completion_min": 127
+    },
+    "candidate_count": 120,
+    "makespan_optima_count": 8,
+    "lower_bound_min": 36
+  },
+  "frozen_jobs": [
+    "B",
+    "C"
+  ],
+  "q4": [
+    {
+      "id": "S0",
+      "label": "Control",
+      "added": [],
+      "review_outage_min": 0,
+      "candidate_count": 6,
+      "score_optima_count": 1,
+      "keep": {
+        "order": [
+          "B",
+          "C",
+          "D",
+          "A",
+          "E"
+        ],
+        "setup": null,
+        "jobs": [
+          {
+            "job": "B",
+            "inspect": [
+              0,
+              3
+            ],
+            "review": [
+              [
+                3,
+                13
+              ]
+            ]
+          },
+          {
+            "job": "C",
+            "inspect": [
+              3,
+              12
+            ],
+            "review": [
+              [
+                13,
+                18
+              ]
+            ]
+          },
+          {
+            "job": "D",
+            "inspect": [
+              12,
+              17
+            ],
+            "review": [
+              [
+                18,
+                26
+              ]
+            ]
+          },
+          {
+            "job": "A",
+            "inspect": [
+              17,
+              28
+            ],
+            "review": [
+              [
+                28,
+                31
+              ]
+            ]
+          },
+          {
+            "job": "E",
+            "inspect": [
+              28,
+              34
+            ],
+            "review": [
+              [
+                34,
+                36
+              ]
+            ]
+          }
+        ],
+        "makespan_min": 36,
+        "sum_completion_min": 124,
+        "k": 5,
+        "N": 5,
+        "eta": 1.0,
+        "window_tlast_min": 36
+      },
+      "replan": {
+        "order": [
+          "B",
+          "C",
+          "D",
+          "A",
+          "E"
+        ],
+        "setup": null,
+        "jobs": [
+          {
+            "job": "B",
+            "inspect": [
+              0,
+              3
+            ],
+            "review": [
+              [
+                3,
+                13
+              ]
+            ]
+          },
+          {
+            "job": "C",
+            "inspect": [
+              3,
+              12
+            ],
+            "review": [
+              [
+                13,
+                18
+              ]
+            ]
+          },
+          {
+            "job": "D",
+            "inspect": [
+              12,
+              17
+            ],
+            "review": [
+              [
+                18,
+                26
+              ]
+            ]
+          },
+          {
+            "job": "A",
+            "inspect": [
+              17,
+              28
+            ],
+            "review": [
+              [
+                28,
+                31
+              ]
+            ]
+          },
+          {
+            "job": "E",
+            "inspect": [
+              28,
+              34
+            ],
+            "review": [
+              [
+                34,
+                36
+              ]
+            ]
+          }
+        ],
+        "makespan_min": 36,
+        "sum_completion_min": 124,
+        "k": 5,
+        "N": 5,
+        "eta": 1.0,
+        "window_tlast_min": 36
+      }
+    },
+    {
+      "id": "S1",
+      "label": "One new order",
+      "added": [
+        "F"
+      ],
+      "review_outage_min": 0,
+      "candidate_count": 24,
+      "score_optima_count": 1,
+      "keep": {
+        "order": [
+          "B",
+          "C",
+          "D",
+          "A",
+          "E",
+          "F"
+        ],
+        "setup": null,
+        "jobs": [
+          {
+            "job": "B",
+            "inspect": [
+              0,
+              3
+            ],
+            "review": [
+              [
+                3,
+                13
+              ]
+            ]
+          },
+          {
+            "job": "C",
+            "inspect": [
+              3,
+              12
+            ],
+            "review": [
+              [
+                13,
+                18
+              ]
+            ]
+          },
+          {
+            "job": "D",
+            "inspect": [
+              12,
+              17
+            ],
+            "review": [
+              [
+                18,
+                26
+              ]
+            ]
+          },
+          {
+            "job": "A",
+            "inspect": [
+              17,
+              28
+            ],
+            "review": [
+              [
+                28,
+                31
+              ]
+            ]
+          },
+          {
+            "job": "E",
+            "inspect": [
+              28,
+              34
+            ],
+            "review": [
+              [
+                34,
+                36
+              ]
+            ]
+          },
+          {
+            "job": "F",
+            "inspect": [
+              34,
+              36
+            ],
+            "review": [
+              [
+                36,
+                39
+              ]
+            ]
+          }
+        ],
+        "makespan_min": 39,
+        "sum_completion_min": 163,
+        "k": 5,
+        "N": 6,
+        "eta": 0.8333333333333334,
+        "window_tlast_min": 36
+      },
+      "replan": {
+        "order": [
+          "B",
+          "C",
+          "D",
+          "A",
+          "E",
+          "F"
+        ],
+        "setup": null,
+        "jobs": [
+          {
+            "job": "B",
+            "inspect": [
+              0,
+              3
+            ],
+            "review": [
+              [
+                3,
+                13
+              ]
+            ]
+          },
+          {
+            "job": "C",
+            "inspect": [
+              3,
+              12
+            ],
+            "review": [
+              [
+                13,
+                18
+              ]
+            ]
+          },
+          {
+            "job": "D",
+            "inspect": [
+              12,
+              17
+            ],
+            "review": [
+              [
+                18,
+                26
+              ]
+            ]
+          },
+          {
+            "job": "A",
+            "inspect": [
+              17,
+              28
+            ],
+            "review": [
+              [
+                28,
+                31
+              ]
+            ]
+          },
+          {
+            "job": "E",
+            "inspect": [
+              28,
+              34
+            ],
+            "review": [
+              [
+                34,
+                36
+              ]
+            ]
+          },
+          {
+            "job": "F",
+            "inspect": [
+              34,
+              36
+            ],
+            "review": [
+              [
+                36,
+                39
+              ]
+            ]
+          }
+        ],
+        "makespan_min": 39,
+        "sum_completion_min": 163,
+        "k": 5,
+        "N": 6,
+        "eta": 0.8333333333333334,
+        "window_tlast_min": 36
+      }
+    },
+    {
+      "id": "S2",
+      "label": "8-min outage",
+      "added": [],
+      "review_outage_min": 8,
+      "candidate_count": 6,
+      "score_optima_count": 2,
+      "keep": {
+        "order": [
+          "B",
+          "C",
+          "D",
+          "A",
+          "E"
+        ],
+        "setup": null,
+        "jobs": [
+          {
+            "job": "B",
+            "inspect": [
+              0,
+              3
+            ],
+            "review": [
+              [
+                3,
+                8
+              ],
+              [
+                16,
+                21
+              ]
+            ]
+          },
+          {
+            "job": "C",
+            "inspect": [
+              3,
+              12
+            ],
+            "review": [
+              [
+                21,
+                26
+              ]
+            ]
+          },
+          {
+            "job": "D",
+            "inspect": [
+              12,
+              17
+            ],
+            "review": [
+              [
+                26,
+                34
+              ]
+            ]
+          },
+          {
+            "job": "A",
+            "inspect": [
+              17,
+              28
+            ],
+            "review": [
+              [
+                34,
+                37
+              ]
+            ]
+          },
+          {
+            "job": "E",
+            "inspect": [
+              28,
+              34
+            ],
+            "review": [
+              [
+                37,
+                39
+              ]
+            ]
+          }
+        ],
+        "makespan_min": 39,
+        "sum_completion_min": 157,
+        "k": 3,
+        "N": 5,
+        "eta": 0.6,
+        "window_tlast_min": 36
+      },
+      "replan": {
+        "order": [
+          "B",
+          "C",
+          "E",
+          "D",
+          "A"
+        ],
+        "setup": [
+          12,
+          14
+        ],
+        "jobs": [
+          {
+            "job": "B",
+            "inspect": [
+              0,
+              3
+            ],
+            "review": [
+              [
+                3,
+                8
+              ],
+              [
+                16,
+                21
+              ]
+            ]
+          },
+          {
+            "job": "C",
+            "inspect": [
+              3,
+              12
+            ],
+            "review": [
+              [
+                21,
+                26
+              ]
+            ]
+          },
+          {
+            "job": "E",
+            "inspect": [
+              14,
+              20
+            ],
+            "review": [
+              [
+                26,
+                28
+              ]
+            ]
+          },
+          {
+            "job": "D",
+            "inspect": [
+              20,
+              25
+            ],
+            "review": [
+              [
+                28,
+                36
+              ]
+            ]
+          },
+          {
+            "job": "A",
+            "inspect": [
+              25,
+              36
+            ],
+            "review": [
+              [
+                36,
+                39
+              ]
+            ]
+          }
+        ],
+        "makespan_min": 39,
+        "sum_completion_min": 150,
+        "k": 4,
+        "N": 5,
+        "eta": 0.8,
+        "window_tlast_min": 36
+      }
+    },
+    {
+      "id": "S3",
+      "label": "One order + 8-min outage",
+      "added": [
+        "F"
+      ],
+      "review_outage_min": 8,
+      "candidate_count": 24,
+      "score_optima_count": 5,
+      "keep": {
+        "order": [
+          "B",
+          "C",
+          "D",
+          "A",
+          "E",
+          "F"
+        ],
+        "setup": null,
+        "jobs": [
+          {
+            "job": "B",
+            "inspect": [
+              0,
+              3
+            ],
+            "review": [
+              [
+                3,
+                8
+              ],
+              [
+                16,
+                21
+              ]
+            ]
+          },
+          {
+            "job": "C",
+            "inspect": [
+              3,
+              12
+            ],
+            "review": [
+              [
+                21,
+                26
+              ]
+            ]
+          },
+          {
+            "job": "D",
+            "inspect": [
+              12,
+              17
+            ],
+            "review": [
+              [
+                26,
+                34
+              ]
+            ]
+          },
+          {
+            "job": "A",
+            "inspect": [
+              17,
+              28
+            ],
+            "review": [
+              [
+                34,
+                37
+              ]
+            ]
+          },
+          {
+            "job": "E",
+            "inspect": [
+              28,
+              34
+            ],
+            "review": [
+              [
+                37,
+                39
+              ]
+            ]
+          },
+          {
+            "job": "F",
+            "inspect": [
+              34,
+              36
+            ],
+            "review": [
+              [
+                39,
+                42
+              ]
+            ]
+          }
+        ],
+        "makespan_min": 42,
+        "sum_completion_min": 199,
+        "k": 3,
+        "N": 6,
+        "eta": 0.5,
+        "window_tlast_min": 36
+      },
+      "replan": {
+        "order": [
+          "B",
+          "C",
+          "E",
+          "F",
+          "A",
+          "D"
+        ],
+        "setup": [
+          12,
+          14
+        ],
+        "jobs": [
+          {
+            "job": "B",
+            "inspect": [
+              0,
+              3
+            ],
+            "review": [
+              [
+                3,
+                8
+              ],
+              [
+                16,
+                21
+              ]
+            ]
+          },
+          {
+            "job": "C",
+            "inspect": [
+              3,
+              12
+            ],
+            "review": [
+              [
+                21,
+                26
+              ]
+            ]
+          },
+          {
+            "job": "E",
+            "inspect": [
+              14,
+              20
+            ],
+            "review": [
+              [
+                26,
+                28
+              ]
+            ]
+          },
+          {
+            "job": "F",
+            "inspect": [
+              20,
+              22
+            ],
+            "review": [
+              [
+                28,
+                31
+              ]
+            ]
+          },
+          {
+            "job": "A",
+            "inspect": [
+              22,
+              33
+            ],
+            "review": [
+              [
+                33,
+                36
+              ]
+            ]
+          },
+          {
+            "job": "D",
+            "inspect": [
+              33,
+              38
+            ],
+            "review": [
+              [
+                38,
+                46
+              ]
+            ]
+          }
+        ],
+        "makespan_min": 46,
+        "sum_completion_min": 188,
+        "k": 5,
+        "N": 6,
+        "eta": 0.8333333333333334,
+        "window_tlast_min": 36
+      }
+    },
+    {
+      "id": "S4",
+      "label": "Two new orders",
+      "added": [
+        "F",
+        "G"
+      ],
+      "review_outage_min": 0,
+      "candidate_count": 120,
+      "score_optima_count": 9,
+      "keep": {
+        "order": [
+          "B",
+          "C",
+          "D",
+          "A",
+          "E",
+          "F",
+          "G"
+        ],
+        "setup": null,
+        "jobs": [
+          {
+            "job": "B",
+            "inspect": [
+              0,
+              3
+            ],
+            "review": [
+              [
+                3,
+                13
+              ]
+            ]
+          },
+          {
+            "job": "C",
+            "inspect": [
+              3,
+              12
+            ],
+            "review": [
+              [
+                13,
+                18
+              ]
+            ]
+          },
+          {
+            "job": "D",
+            "inspect": [
+              12,
+              17
+            ],
+            "review": [
+              [
+                18,
+                26
+              ]
+            ]
+          },
+          {
+            "job": "A",
+            "inspect": [
+              17,
+              28
+            ],
+            "review": [
+              [
+                28,
+                31
+              ]
+            ]
+          },
+          {
+            "job": "E",
+            "inspect": [
+              28,
+              34
+            ],
+            "review": [
+              [
+                34,
+                36
+              ]
+            ]
+          },
+          {
+            "job": "F",
+            "inspect": [
+              34,
+              36
+            ],
+            "review": [
+              [
+                36,
+                39
+              ]
+            ]
+          },
+          {
+            "job": "G",
+            "inspect": [
+              36,
+              41
+            ],
+            "review": [
+              [
+                41,
+                47
+              ]
+            ]
+          }
+        ],
+        "makespan_min": 47,
+        "sum_completion_min": 210,
+        "k": 5,
+        "N": 7,
+        "eta": 0.7142857142857143,
+        "window_tlast_min": 36
+      },
+      "replan": {
+        "order": [
+          "B",
+          "C",
+          "F",
+          "G",
+          "D",
+          "A",
+          "E"
+        ],
+        "setup": [
+          12,
+          14
+        ],
+        "jobs": [
+          {
+            "job": "B",
+            "inspect": [
+              0,
+              3
+            ],
+            "review": [
+              [
+                3,
+                13
+              ]
+            ]
+          },
+          {
+            "job": "C",
+            "inspect": [
+              3,
+              12
+            ],
+            "review": [
+              [
+                13,
+                18
+              ]
+            ]
+          },
+          {
+            "job": "F",
+            "inspect": [
+              14,
+              16
+            ],
+            "review": [
+              [
+                18,
+                21
+              ]
+            ]
+          },
+          {
+            "job": "G",
+            "inspect": [
+              16,
+              21
+            ],
+            "review": [
+              [
+                21,
+                27
+              ]
+            ]
+          },
+          {
+            "job": "D",
+            "inspect": [
+              21,
+              26
+            ],
+            "review": [
+              [
+                27,
+                35
+              ]
+            ]
+          },
+          {
+            "job": "A",
+            "inspect": [
+              26,
+              37
+            ],
+            "review": [
+              [
+                37,
+                40
+              ]
+            ]
+          },
+          {
+            "job": "E",
+            "inspect": [
+              37,
+              43
+            ],
+            "review": [
+              [
+                43,
+                45
+              ]
+            ]
+          }
+        ],
+        "makespan_min": 45,
+        "sum_completion_min": 199,
+        "k": 5,
+        "N": 7,
+        "eta": 0.7142857142857143,
+        "window_tlast_min": 36
+      }
+    },
+    {
+      "id": "S5",
+      "label": "Two orders + 12-min outage",
+      "added": [
+        "F",
+        "G"
+      ],
+      "review_outage_min": 12,
+      "candidate_count": 120,
+      "score_optima_count": 28,
+      "keep": {
+        "order": [
+          "B",
+          "C",
+          "D",
+          "A",
+          "E",
+          "F",
+          "G"
+        ],
+        "setup": null,
+        "jobs": [
+          {
+            "job": "B",
+            "inspect": [
+              0,
+              3
+            ],
+            "review": [
+              [
+                3,
+                8
+              ],
+              [
+                20,
+                25
+              ]
+            ]
+          },
+          {
+            "job": "C",
+            "inspect": [
+              3,
+              12
+            ],
+            "review": [
+              [
+                25,
+                30
+              ]
+            ]
+          },
+          {
+            "job": "D",
+            "inspect": [
+              12,
+              17
+            ],
+            "review": [
+              [
+                30,
+                38
+              ]
+            ]
+          },
+          {
+            "job": "A",
+            "inspect": [
+              17,
+              28
+            ],
+            "review": [
+              [
+                38,
+                41
+              ]
+            ]
+          },
+          {
+            "job": "E",
+            "inspect": [
+              28,
+              34
+            ],
+            "review": [
+              [
+                41,
+                43
+              ]
+            ]
+          },
+          {
+            "job": "F",
+            "inspect": [
+              34,
+              36
+            ],
+            "review": [
+              [
+                43,
+                46
+              ]
+            ]
+          },
+          {
+            "job": "G",
+            "inspect": [
+              36,
+              41
+            ],
+            "review": [
+              [
+                46,
+                52
+              ]
+            ]
+          }
+        ],
+        "makespan_min": 52,
+        "sum_completion_min": 275,
+        "k": 2,
+        "N": 7,
+        "eta": 0.2857142857142857,
+        "window_tlast_min": 36
+      },
+      "replan": {
+        "order": [
+          "B",
+          "C",
+          "E",
+          "A",
+          "F",
+          "G",
+          "D"
+        ],
+        "setup": [
+          12,
+          14
+        ],
+        "jobs": [
+          {
+            "job": "B",
+            "inspect": [
+              0,
+              3
+            ],
+            "review": [
+              [
+                3,
+                8
+              ],
+              [
+                20,
+                25
+              ]
+            ]
+          },
+          {
+            "job": "C",
+            "inspect": [
+              3,
+              12
+            ],
+            "review": [
+              [
+                25,
+                30
+              ]
+            ]
+          },
+          {
+            "job": "E",
+            "inspect": [
+              14,
+              20
+            ],
+            "review": [
+              [
+                30,
+                32
+              ]
+            ]
+          },
+          {
+            "job": "A",
+            "inspect": [
+              20,
+              31
+            ],
+            "review": [
+              [
+                32,
+                35
+              ]
+            ]
+          },
+          {
+            "job": "F",
+            "inspect": [
+              31,
+              33
+            ],
+            "review": [
+              [
+                35,
+                38
+              ]
+            ]
+          },
+          {
+            "job": "G",
+            "inspect": [
+              33,
+              38
+            ],
+            "review": [
+              [
+                38,
+                44
+              ]
+            ]
+          },
+          {
+            "job": "D",
+            "inspect": [
+              38,
+              43
+            ],
+            "review": [
+              [
+                44,
+                52
+              ]
+            ]
+          }
+        ],
+        "makespan_min": 52,
+        "sum_completion_min": 256,
+        "k": 4,
+        "N": 7,
+        "eta": 0.5714285714285714,
+        "window_tlast_min": 36
+      }
+    }
+  ],
+  "s3_changeover_sensitivity": [
+    {
+      "scenario": "S3",
+      "changeover_min": 0,
+      "keep": {
+        "order": [
+          "B",
+          "C",
+          "D",
+          "A",
+          "E",
+          "F"
+        ],
+        "k": 3,
+        "N": 6,
+        "makespan_min": 42
+      },
+      "replan": {
+        "order": [
+          "B",
+          "C",
+          "E",
+          "F",
+          "A",
+          "D"
+        ],
+        "k": 5,
+        "N": 6,
+        "makespan_min": 44
+      },
+      "queue_changed": true,
+      "score_optima_count": 6,
+      "candidate_count": 24
+    },
+    {
+      "scenario": "S3",
+      "changeover_min": 2,
+      "keep": {
+        "order": [
+          "B",
+          "C",
+          "D",
+          "A",
+          "E",
+          "F"
+        ],
+        "k": 3,
+        "N": 6,
+        "makespan_min": 42
+      },
+      "replan": {
+        "order": [
+          "B",
+          "C",
+          "E",
+          "F",
+          "A",
+          "D"
+        ],
+        "k": 5,
+        "N": 6,
+        "makespan_min": 46
+      },
+      "queue_changed": true,
+      "score_optima_count": 5,
+      "candidate_count": 24
+    },
+    {
+      "scenario": "S3",
+      "changeover_min": 4,
+      "keep": {
+        "order": [
+          "B",
+          "C",
+          "D",
+          "A",
+          "E",
+          "F"
+        ],
+        "k": 3,
+        "N": 6,
+        "makespan_min": 42
+      },
+      "replan": {
+        "order": [
+          "B",
+          "C",
+          "E",
+          "F",
+          "D",
+          "A"
+        ],
+        "k": 4,
+        "N": 6,
+        "makespan_min": 43
+      },
+      "queue_changed": true,
+      "score_optima_count": 4,
+      "candidate_count": 24
+    },
+    {
+      "scenario": "S3",
+      "changeover_min": 6,
+      "keep": {
+        "order": [
+          "B",
+          "C",
+          "D",
+          "A",
+          "E",
+          "F"
+        ],
+        "k": 3,
+        "N": 6,
+        "makespan_min": 42
+      },
+      "replan": {
+        "order": [
+          "B",
+          "C",
+          "E",
+          "F",
+          "D",
+          "A"
+        ],
+        "k": 4,
+        "N": 6,
+        "makespan_min": 45
+      },
+      "queue_changed": true,
+      "score_optima_count": 3,
+      "candidate_count": 24
+    },
+    {
+      "scenario": "S3",
+      "changeover_min": 8,
+      "keep": {
+        "order": [
+          "B",
+          "C",
+          "D",
+          "A",
+          "E",
+          "F"
+        ],
+        "k": 3,
+        "N": 6,
+        "makespan_min": 42
+      },
+      "replan": {
+        "order": [
+          "B",
+          "C",
+          "E",
+          "F",
+          "D",
+          "A"
+        ],
+        "k": 4,
+        "N": 6,
+        "makespan_min": 47
+      },
+      "queue_changed": true,
+      "score_optima_count": 3,
+      "candidate_count": 24
+    },
+    {
+      "scenario": "S3",
+      "changeover_min": 10,
+      "keep": {
+        "order": [
+          "B",
+          "C",
+          "D",
+          "A",
+          "E",
+          "F"
+        ],
+        "k": 3,
+        "N": 6,
+        "makespan_min": 42
+      },
+      "replan": {
+        "order": [
+          "B",
+          "C",
+          "F",
+          "E",
+          "D",
+          "A"
+        ],
+        "k": 4,
+        "N": 6,
+        "makespan_min": 49
+      },
+      "queue_changed": true,
+      "score_optima_count": 2,
+      "candidate_count": 24
+    },
+    {
+      "scenario": "S3",
+      "changeover_min": 14,
+      "keep": {
+        "order": [
+          "B",
+          "C",
+          "D",
+          "A",
+          "E",
+          "F"
+        ],
+        "k": 3,
+        "N": 6,
+        "makespan_min": 42
+      },
+      "replan": {
+        "order": [
+          "B",
+          "C",
+          "F",
+          "E",
+          "D",
+          "A"
+        ],
+        "k": 4,
+        "N": 6,
+        "makespan_min": 53
+      },
+      "queue_changed": true,
+      "score_optima_count": 1,
+      "candidate_count": 24
+    },
+    {
+      "scenario": "S3",
+      "changeover_min": 15,
+      "keep": {
+        "order": [
+          "B",
+          "C",
+          "D",
+          "A",
+          "E",
+          "F"
+        ],
+        "k": 3,
+        "N": 6,
+        "makespan_min": 42
+      },
+      "replan": {
+        "order": [
+          "B",
+          "C",
+          "D",
+          "A",
+          "E",
+          "F"
+        ],
+        "k": 3,
+        "N": 6,
+        "makespan_min": 42
+      },
+      "queue_changed": false,
+      "score_optima_count": 1,
+      "candidate_count": 24
+    }
+  ],
+  "validation": {
+    "independent_method": "minute-step replay of every resource interval in every candidate",
+    "nominal_candidates_checked": 120,
+    "scenario_candidates_checked": 300,
+    "sensitivity_candidates_checked": 192
+  }
+}

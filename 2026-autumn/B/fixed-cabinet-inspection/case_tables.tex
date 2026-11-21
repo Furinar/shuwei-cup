@@ -1,0 +1,247 @@
+% Generated from the case inputs and computation results by render_tables.py.
+
+\newcommand{\PlateTable}{%
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}rrrrr@{}}
+\toprule
+Threshold (px) & $d_{\max}$ (m) & Area (m$^2$) & Fraction & Grid (m$^2$) \\
+\midrule
+180 & 1.1085 & 0.454956 & 0.4213 & 0.454945 \\
+200 & 0.9977 & 0.355190 & 0.3289 & 0.355158 \\
+240 & 0.8314 & 0.219571 & 0.2033 & 0.219564 \\
+\bottomrule
+\end{tabular}\endgroup%
+}
+
+\newcommand{\PairTable}{%
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Pair & Cost (min) & Fits 12 min & Variance [$(^\circ\mathrm{C})^2$] & SE ($^\circ$C) \\
+\midrule
+A+B & 15 & No & 0.11633 & 0.34107 \\
+A+C & 12 & Yes & 0.13140 & 0.36249 \\
+A+D & 10 & Yes & 0.14641 & 0.38263 \\
+B+C & 11 & Yes & 0.16960 & 0.41183 \\
+B+D & 9 & Yes & 0.20200 & 0.44944 \\
+C+D & 6 & Yes & 0.28923 & 0.53780 \\
+\bottomrule
+\end{tabular}\endgroup%
+}
+
+\newcommand{\JobsTable}{%
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lrrl@{}}
+\toprule
+Job & Inspection (min) & Review (min) & Release \\
+\midrule
+A & 11 & 3 & Initial \\
+B & 3 & 10 & Initial \\
+C & 9 & 5 & Initial \\
+D & 5 & 8 & Initial \\
+E & 6 & 2 & Initial \\
+F & 2 & 3 & At notice \\
+G & 5 & 6 & At notice \\
+\bottomrule
+\end{tabular}\endgroup%
+}
+
+\newcommand{\BaseTable}{%
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{FCFS} & \multicolumn{2}{c}{Optimal order} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Job & Inspection & Review & Inspection & Review \\
+\midrule
+A & 0--11 & 11--14 & 17--28 & 28--31 \\
+B & 11--14 & 14--24 & 0--3 & 3--13 \\
+C & 14--23 & 24--29 & 3--12 & 13--18 \\
+D & 23--28 & 29--37 & 12--17 & 18--26 \\
+E & 28--34 & 37--39 & 28--34 & 34--36 \\
+\bottomrule
+\end{tabular}\endgroup%
+}
+
+\newcommand{\ScenarioTable}{%
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}llrrrrrr@{}}
+\toprule
+ & & & \multicolumn{2}{c}{Keep} & \multicolumn{2}{c}{Reorder} &  \\
+\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Case & New & Outage (min) & $k/N$ & Clear (min) & $k/N$ & Clear (min) & $\Delta k$ \\
+\midrule
+S0 & --- & 0 & 5/5 & 36 & 5/5 & 36 & 0 \\
+S1 & F & 0 & 5/6 & 39 & 5/6 & 39 & 0 \\
+S2 & --- & 8 & 3/5 & 39 & 4/5 & 39 & +1 \\
+S3 & F & 8 & 3/6 & 42 & 5/6 & 46 & +2 \\
+S4 & F, G & 0 & 5/7 & 47 & 5/7 & 45 & 0 \\
+S5 & F, G & 12 & 2/7 & 52 & 4/7 & 52 & +2 \\
+\bottomrule
+\end{tabular}\endgroup%
+}
+
+\newcommand{\AuditAppendix}{%
+\subsection*{S0. Control}
+The desk remains open.\par
+\begin{center}\small
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{Keep} & \multicolumn{2}{c}{Reorder} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Job & Inspection & Review & Inspection & Review \\
+\midrule
+A & 17--28 & 28--31 & 17--28 & 28--31 \\
+B & 0--3 & 3--13 & 0--3 & 3--13 \\
+C & 3--12 & 13--18 & 3--12 & 13--18 \\
+D & 12--17 & 18--26 & 12--17 & 18--26 \\
+E & 28--34 & 34--36 & 28--34 & 34--36 \\
+\bottomrule
+\end{tabular}\endgroup
+\end{center}
+\subsection*{S1. One new order}
+The desk remains open.\par
+\begin{center}\small
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{Keep} & \multicolumn{2}{c}{Reorder} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Job & Inspection & Review & Inspection & Review \\
+\midrule
+A & 17--28 & 28--31 & 17--28 & 28--31 \\
+B & 0--3 & 3--13 & 0--3 & 3--13 \\
+C & 3--12 & 13--18 & 3--12 & 13--18 \\
+D & 12--17 & 18--26 & 12--17 & 18--26 \\
+E & 28--34 & 34--36 & 28--34 & 34--36 \\
+F & 34--36 & 36--39 & 34--36 & 36--39 \\
+\bottomrule
+\end{tabular}\endgroup
+\end{center}
+\clearpage
+\subsection*{S2. 8-min outage}
+The desk closes during 8--16 min. Reorder changes the queue during 12--14 min.\par
+\begin{center}\small
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{Keep} & \multicolumn{2}{c}{Reorder} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Job & Inspection & Review & Inspection & Review \\
+\midrule
+A & 17--28 & 34--37 & 25--36 & 36--39 \\
+B & 0--3 & 3--8,\,16--21 & 0--3 & 3--8,\,16--21 \\
+C & 3--12 & 21--26 & 3--12 & 21--26 \\
+D & 12--17 & 26--34 & 20--25 & 28--36 \\
+E & 28--34 & 37--39 & 14--20 & 26--28 \\
+\bottomrule
+\end{tabular}\endgroup
+\end{center}
+\subsection*{S3. One order + 8-min outage}
+The desk closes during 8--16 min. Reorder changes the queue during 12--14 min.\par
+\begin{center}\small
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{Keep} & \multicolumn{2}{c}{Reorder} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Job & Inspection & Review & Inspection & Review \\
+\midrule
+A & 17--28 & 34--37 & 22--33 & 33--36 \\
+B & 0--3 & 3--8,\,16--21 & 0--3 & 3--8,\,16--21 \\
+C & 3--12 & 21--26 & 3--12 & 21--26 \\
+D & 12--17 & 26--34 & 33--38 & 38--46 \\
+E & 28--34 & 37--39 & 14--20 & 26--28 \\
+F & 34--36 & 39--42 & 20--22 & 28--31 \\
+\bottomrule
+\end{tabular}\endgroup
+\end{center}
+\clearpage
+\subsection*{S4. Two new orders}
+The desk remains open. Reorder changes the queue during 12--14 min.\par
+\begin{center}\small
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{Keep} & \multicolumn{2}{c}{Reorder} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Job & Inspection & Review & Inspection & Review \\
+\midrule
+A & 17--28 & 28--31 & 26--37 & 37--40 \\
+B & 0--3 & 3--13 & 0--3 & 3--13 \\
+C & 3--12 & 13--18 & 3--12 & 13--18 \\
+D & 12--17 & 18--26 & 21--26 & 27--35 \\
+E & 28--34 & 34--36 & 37--43 & 43--45 \\
+F & 34--36 & 36--39 & 14--16 & 18--21 \\
+G & 36--41 & 41--47 & 16--21 & 21--27 \\
+\bottomrule
+\end{tabular}\endgroup
+\end{center}
+\subsection*{S5. Two orders + 12-min outage}
+The desk closes during 8--20 min. Reorder changes the queue during 12--14 min.\par
+\begin{center}\small
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{Keep} & \multicolumn{2}{c}{Reorder} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Job & Inspection & Review & Inspection & Review \\
+\midrule
+A & 17--28 & 38--41 & 20--31 & 32--35 \\
+B & 0--3 & 3--8,\,20--25 & 0--3 & 3--8,\,20--25 \\
+C & 3--12 & 25--30 & 3--12 & 25--30 \\
+D & 12--17 & 30--38 & 38--43 & 44--52 \\
+E & 28--34 & 41--43 & 14--20 & 30--32 \\
+F & 34--36 & 43--46 & 31--33 & 35--38 \\
+G & 36--41 & 46--52 & 33--38 & 38--44 \\
+\bottomrule
+\end{tabular}\endgroup
+\end{center}%
+}
+
+\newcommand{\NoiseTable}{%
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}rrrrc@{}}
+\toprule
+$s$ (m) & $\sigma$ (m) & Exact $p$ & MC rate & 95\% Wilson interval \\
+\midrule
+0.000 & 0.3000 & 0.999996 & 0.999996 & [0.999992, 0.999998] \\
+40.000 & 1.1000 & 0.992590 & 0.992675 & [0.992556, 0.992792] \\
+66.837 & 1.6367 & 0.950000 & 0.950023 & [0.949720, 0.950324] \\
+80.000 & 1.9000 & 0.915068 & 0.914967 & [0.914580, 0.915353] \\
+\bottomrule
+\end{tabular}\endgroup%
+}
+
+\newcommand{\SensitivityText}{%
+In S3 the original queue finishes 3 of 6 orders on time and clears in 42 minutes. With changeovers of 0, 2 and 10 minutes, the on-time counts are 5, 5 and 4. Clearance takes 44, 46 and 49 minutes, respectively. At 14 minutes reordering still finishes 4 on time. At 15 minutes the optimal policy retains the original queue.%
+}
+
+\newcommand{\ToleranceTable}{%
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}crrrr@{}}
+\toprule
+Axial / lateral (cm) & $d_0$ (cm) & Area (\%) & Width (px) & Margin (px) \\
+\midrule
+0 / 0 & 30.0 & 32.89 & 665.11 & 147.45 \\
+1 / 1 & 31.0 & 29.97 & 623.54 & 119.73 \\
+2 / 2 & 32.0 & 27.17 & 586.86 & 92.02 \\
+\bottomrule
+\end{tabular}\endgroup%
+}
+
+\newcommand{\RecoveryTable}{%
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}llrr@{}}
+\toprule
+Decision rule & Queue & $E[k]$ & $E[C_{\max}]$ (min) \\
+\midrule
+Keep queue & BCDAEF & 3.000 & 44.08 \\
+Shortest total work & BCFEDA & 3.846 & 44.46 \\
+Assume 10 min & BCEFAD & 4.308 & 46.77 \\
+Optimize expected score & BCEFAD & 4.308 & 46.77 \\
+Known recovery time & Varies & 4.308 & 45.62 \\
+\bottomrule
+\end{tabular}\endgroup%
+}

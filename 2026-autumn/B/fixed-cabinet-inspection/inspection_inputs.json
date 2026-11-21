@@ -1,0 +1,28 @@
+{
+  "provenance": "Constructed practice case for stationary cabinet inspection and isothermal calibration. All inputs below are assumptions or illustrative readings.",
+  "plate": {
+    "distance_min_m": 0.30,
+    "distance_max_m": 1.50,
+    "offset_limit_m": 0.45,
+    "plate_width_m": 0.24,
+    "sensor_pixels": 960,
+    "horizontal_fov_deg": 60,
+    "min_plate_pixels": 200,
+    "sensitivity_min_pixels": [180, 200, 240],
+    "grid_distance_cells": 9600,
+    "grid_offset_cells": 6400
+  },
+  "temperature": {
+    "noise_model": "Independent centered Gaussian repeatability errors and one centered Gaussian reference offset shared by all readings. Standard deviations are known.",
+    "common_reference_sd_C": 0.20,
+    "confidence": 0.95,
+    "budget_instrument_min": 12,
+    "sensitivity_budgets": [10, 12, 15],
+    "channels": [
+      {"id": "A", "repeat_sd_C": 0.35, "setup_min": 8, "reading_C": 22.4},
+      {"id": "B", "repeat_sd_C": 0.45, "setup_min": 7, "reading_C": 22.7},
+      {"id": "C", "repeat_sd_C": 0.60, "setup_min": 4, "reading_C": 22.1},
+      {"id": "D", "repeat_sd_C": 0.90, "setup_min": 2, "reading_C": 22.6}
+    ]
+  }
+}

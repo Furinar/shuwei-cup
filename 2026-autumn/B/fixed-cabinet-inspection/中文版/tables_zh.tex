@@ -1,0 +1,247 @@
+% 据算例输入与计算输出生成，数值同英文修订稿。
+
+\newcommand{\PlateTable}{%
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}rrrrr@{}}
+\toprule
+最低像宽 (px) & $d_{\max}$ (m) & 解析面积 (m$^2$) & 面积占比 & 网格面积 (m$^2$) \\
+\midrule
+180 & 1.1085 & 0.454956 & 0.4213 & 0.454945 \\
+200 & 0.9977 & 0.355190 & 0.3289 & 0.355158 \\
+240 & 0.8314 & 0.219571 & 0.2033 & 0.219564 \\
+\bottomrule
+\end{tabular}\endgroup%
+}
+
+\newcommand{\PairTable}{%
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+通道组合 & 准备用时 (min) & 12 分钟内可行 & 方差 [$(^\circ\mathrm{C})^2$] & 标准误 ($^\circ$C) \\
+\midrule
+A+B & 15 & 否 & 0.11633 & 0.34107 \\
+A+C & 12 & 是 & 0.13140 & 0.36249 \\
+A+D & 10 & 是 & 0.14641 & 0.38263 \\
+B+C & 11 & 是 & 0.16960 & 0.41183 \\
+B+D & 9 & 是 & 0.20200 & 0.44944 \\
+C+D & 6 & 是 & 0.28923 & 0.53780 \\
+\bottomrule
+\end{tabular}\endgroup%
+}
+
+\newcommand{\JobsTable}{%
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lrrl@{}}
+\toprule
+工单 & 检测用时 (min) & 复核用时 (min) & 下达时机 \\
+\midrule
+A & 11 & 3 & 初始下达 \\
+B & 3 & 10 & 初始下达 \\
+C & 9 & 5 & 初始下达 \\
+D & 5 & 8 & 初始下达 \\
+E & 6 & 2 & 初始下达 \\
+F & 2 & 3 & 收到通知时 \\
+G & 5 & 6 & 收到通知时 \\
+\bottomrule
+\end{tabular}\endgroup%
+}
+
+\newcommand{\BaseTable}{%
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{登记顺序} & \multicolumn{2}{c}{最优顺序} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+工单 & 检测 & 复核 & 检测 & 复核 \\
+\midrule
+A & 0--11 & 11--14 & 17--28 & 28--31 \\
+B & 11--14 & 14--24 & 0--3 & 3--13 \\
+C & 14--23 & 24--29 & 3--12 & 13--18 \\
+D & 23--28 & 29--37 & 12--17 & 18--26 \\
+E & 28--34 & 37--39 & 28--34 & 34--36 \\
+\bottomrule
+\end{tabular}\endgroup%
+}
+
+\newcommand{\ScenarioTable}{%
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}llrrrrrr@{}}
+\toprule
+ & & & \multicolumn{2}{c}{保留原序} & \multicolumn{2}{c}{允许重排} &  \\
+\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+情景 & 新增工单 & 停机 (min) & $k/N$ & 清空时刻 (min) & $k/N$ & 清空时刻 (min) & $\Delta k$ \\
+\midrule
+S0 & --- & 0 & 5/5 & 36 & 5/5 & 36 & 0 \\
+S1 & F & 0 & 5/6 & 39 & 5/6 & 39 & 0 \\
+S2 & --- & 8 & 3/5 & 39 & 4/5 & 39 & +1 \\
+S3 & F & 8 & 3/6 & 42 & 5/6 & 46 & +2 \\
+S4 & F, G & 0 & 5/7 & 47 & 5/7 & 45 & 0 \\
+S5 & F, G & 12 & 2/7 & 52 & 4/7 & 52 & +2 \\
+\bottomrule
+\end{tabular}\endgroup%
+}
+
+\newcommand{\AuditAppendix}{%
+\subsection*{S0　对照情景}
+复核台全程开放。\par
+\begin{center}\small
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{保留原序} & \multicolumn{2}{c}{允许重排} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+工单 & 检测 & 复核 & 检测 & 复核 \\
+\midrule
+A & 17--28 & 28--31 & 17--28 & 28--31 \\
+B & 0--3 & 3--13 & 0--3 & 3--13 \\
+C & 3--12 & 13--18 & 3--12 & 13--18 \\
+D & 12--17 & 18--26 & 12--17 & 18--26 \\
+E & 28--34 & 34--36 & 28--34 & 34--36 \\
+\bottomrule
+\end{tabular}\endgroup
+\end{center}
+\subsection*{S1　新增一张工单}
+复核台全程开放。\par
+\begin{center}\small
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{保留原序} & \multicolumn{2}{c}{允许重排} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+工单 & 检测 & 复核 & 检测 & 复核 \\
+\midrule
+A & 17--28 & 28--31 & 17--28 & 28--31 \\
+B & 0--3 & 3--13 & 0--3 & 3--13 \\
+C & 3--12 & 13--18 & 3--12 & 13--18 \\
+D & 12--17 & 18--26 & 12--17 & 18--26 \\
+E & 28--34 & 34--36 & 28--34 & 34--36 \\
+F & 34--36 & 36--39 & 34--36 & 36--39 \\
+\bottomrule
+\end{tabular}\endgroup
+\end{center}
+\clearpage
+\subsection*{S2　停机 8 分钟}
+复核台在第 8 至 16 分钟停机。重排策略在第 12 至 14 分钟切换队列。\par
+\begin{center}\small
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{保留原序} & \multicolumn{2}{c}{允许重排} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+工单 & 检测 & 复核 & 检测 & 复核 \\
+\midrule
+A & 17--28 & 34--37 & 25--36 & 36--39 \\
+B & 0--3 & 3--8,\,16--21 & 0--3 & 3--8,\,16--21 \\
+C & 3--12 & 21--26 & 3--12 & 21--26 \\
+D & 12--17 & 26--34 & 20--25 & 28--36 \\
+E & 28--34 & 37--39 & 14--20 & 26--28 \\
+\bottomrule
+\end{tabular}\endgroup
+\end{center}
+\subsection*{S3　新增一张工单，停机 8 分钟}
+复核台在第 8 至 16 分钟停机。重排策略在第 12 至 14 分钟切换队列。\par
+\begin{center}\small
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{保留原序} & \multicolumn{2}{c}{允许重排} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+工单 & 检测 & 复核 & 检测 & 复核 \\
+\midrule
+A & 17--28 & 34--37 & 22--33 & 33--36 \\
+B & 0--3 & 3--8,\,16--21 & 0--3 & 3--8,\,16--21 \\
+C & 3--12 & 21--26 & 3--12 & 21--26 \\
+D & 12--17 & 26--34 & 33--38 & 38--46 \\
+E & 28--34 & 37--39 & 14--20 & 26--28 \\
+F & 34--36 & 39--42 & 20--22 & 28--31 \\
+\bottomrule
+\end{tabular}\endgroup
+\end{center}
+\clearpage
+\subsection*{S4　新增两张工单}
+复核台全程开放。重排策略在第 12 至 14 分钟切换队列。\par
+\begin{center}\small
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{保留原序} & \multicolumn{2}{c}{允许重排} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+工单 & 检测 & 复核 & 检测 & 复核 \\
+\midrule
+A & 17--28 & 28--31 & 26--37 & 37--40 \\
+B & 0--3 & 3--13 & 0--3 & 3--13 \\
+C & 3--12 & 13--18 & 3--12 & 13--18 \\
+D & 12--17 & 18--26 & 21--26 & 27--35 \\
+E & 28--34 & 34--36 & 37--43 & 43--45 \\
+F & 34--36 & 36--39 & 14--16 & 18--21 \\
+G & 36--41 & 41--47 & 16--21 & 21--27 \\
+\bottomrule
+\end{tabular}\endgroup
+\end{center}
+\subsection*{S5　新增两张工单，停机 12 分钟}
+复核台在第 8 至 20 分钟停机。重排策略在第 12 至 14 分钟切换队列。\par
+\begin{center}\small
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{保留原序} & \multicolumn{2}{c}{允许重排} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+工单 & 检测 & 复核 & 检测 & 复核 \\
+\midrule
+A & 17--28 & 38--41 & 20--31 & 32--35 \\
+B & 0--3 & 3--8,\,20--25 & 0--3 & 3--8,\,20--25 \\
+C & 3--12 & 25--30 & 3--12 & 25--30 \\
+D & 12--17 & 30--38 & 38--43 & 44--52 \\
+E & 28--34 & 41--43 & 14--20 & 30--32 \\
+F & 34--36 & 43--46 & 31--33 & 35--38 \\
+G & 36--41 & 46--52 & 33--38 & 38--44 \\
+\bottomrule
+\end{tabular}\endgroup
+\end{center}%
+}
+
+\newcommand{\NoiseTable}{%
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}rrrrc@{}}
+\toprule
+$s$ (m) & $\sigma$ (m) & 积分概率 $p$ & 模拟命中率 & 95\% Wilson 区间 \\
+\midrule
+0.000 & 0.3000 & 0.999996 & 0.999996 & [0.999992, 0.999998] \\
+40.000 & 1.1000 & 0.992590 & 0.992675 & [0.992556, 0.992792] \\
+66.837 & 1.6367 & 0.950000 & 0.950023 & [0.949720, 0.950324] \\
+80.000 & 1.9000 & 0.915068 & 0.914967 & [0.914580, 0.915353] \\
+\bottomrule
+\end{tabular}\endgroup%
+}
+
+\newcommand{\SensitivityText}{%
+在 S3 中，保留原序可使六张工单中的三张按期完成，第 42 分钟清空队列。若切换队列分别需要 0、2 和 10 分钟，允许重排时分别有 5、5 和 4 张工单按期完成，队列分别在第 44、46 和 49 分钟清空。即使切换需要 14 分钟，重排仍可按期完成 4 张工单。当切换需要 15 分钟时，保留原序成为最优策略。%
+}
+
+\newcommand{\ToleranceTable}{%
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}crrrr@{}}
+\toprule
+轴向/横向公差 (cm) & $d_0$ (cm) & 面积占比 (\%) & 保证像宽 (px) & 边缘余量 (px) \\
+\midrule
+0 / 0 & 30.0 & 32.89 & 665.11 & 147.45 \\
+1 / 1 & 31.0 & 29.97 & 623.54 & 119.73 \\
+2 / 2 & 32.0 & 27.17 & 586.86 & 92.02 \\
+\bottomrule
+\end{tabular}\endgroup%
+}
+
+\newcommand{\RecoveryTable}{%
+\begingroup\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}llrr@{}}
+\toprule
+决策规则 & 队列 & $E[k]$ & $E[C_{\max}]$ (min) \\
+\midrule
+保留原序 & BCDAEF & 3.000 & 44.08 \\
+单张工单总工时短者优先 & BCFEDA & 3.846 & 44.46 \\
+按维修 10 分钟决策 & BCEFAD & 4.308 & 46.77 \\
+优化期望得分 & BCEFAD & 4.308 & 46.77 \\
+已知恢复时刻 & 随维修时长而变 & 4.308 & 45.62 \\
+\bottomrule
+\end{tabular}\endgroup%
+}

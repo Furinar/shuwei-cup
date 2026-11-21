@@ -1,0 +1,253 @@
+{
+  "input_sha256": "c821ab5596169583daf910939a4c04776af766280f093dd48ce2f2c4f639f410",
+  "plate": {
+    "mechanical_area_m2": 1.08,
+    "grid_cells": [
+      9600,
+      6400
+    ],
+    "nominal_min_pixels": 200,
+    "by_threshold": [
+      {
+        "min_pixels": 180,
+        "distance_bounds_m": [
+          0.3,
+          1.1085125168440817
+        ],
+        "offset_saturation_distance_m": 0.9872689603142604,
+        "area_m2": 0.4549564335534789,
+        "fraction": 0.42125595699396196,
+        "best": {
+          "distance_m": 0.3,
+          "offset_m": 0.0,
+          "plate_pixels": 665.107510106449,
+          "admissible_offset_limit_m": 0.05320508075688768,
+          "image_clearance_per_side_m": 0.05320508075688768,
+          "image_clearance_per_side_pixels": 147.4462449467755
+        },
+        "grid_area_m2": 0.45494525390625007,
+        "grid_abs_difference_m2": 1.1179647228853895e-05
+      },
+      {
+        "min_pixels": 200,
+        "distance_bounds_m": [
+          0.3,
+          0.9976612651596735
+        ],
+        "offset_saturation_distance_m": 0.9872689603142604,
+        "area_m2": 0.3551903070375114,
+        "fraction": 0.32887991392362165,
+        "best": {
+          "distance_m": 0.3,
+          "offset_m": 0.0,
+          "plate_pixels": 665.107510106449,
+          "admissible_offset_limit_m": 0.05320508075688768,
+          "image_clearance_per_side_m": 0.05320508075688768,
+          "image_clearance_per_side_pixels": 147.4462449467755
+        },
+        "grid_area_m2": 0.35515775390625004,
+        "grid_abs_difference_m2": 3.2553131261381374e-05
+      },
+      {
+        "min_pixels": 240,
+        "distance_bounds_m": [
+          0.3,
+          0.8313843876330612
+        ],
+        "offset_saturation_distance_m": 0.9872689603142604,
+        "area_m2": 0.21957072880486828,
+        "fraction": 0.20330623037487802,
+        "best": {
+          "distance_m": 0.3,
+          "offset_m": 0.0,
+          "plate_pixels": 665.107510106449,
+          "admissible_offset_limit_m": 0.05320508075688768,
+          "image_clearance_per_side_m": 0.05320508075688768,
+          "image_clearance_per_side_pixels": 147.4462449467755
+        },
+        "grid_area_m2": 0.21956403515625003,
+        "grid_abs_difference_m2": 6.693648618244508e-06
+      }
+    ]
+  },
+  "temperature": {
+    "all_pairs": [
+      {
+        "pair": [
+          "A",
+          "B"
+        ],
+        "cost_min": 15,
+        "feasible_at_nominal_budget": false,
+        "weights": [
+          0.6230769230769231,
+          0.3769230769230768
+        ],
+        "mean_C": 22.51307692307692,
+        "variance_C2": 0.11632692307692306,
+        "standard_error_C": 0.3410673292429562,
+        "interval_C": [
+          21.84459724145746,
+          23.18155660469638
+        ]
+      },
+      {
+        "pair": [
+          "A",
+          "C"
+        ],
+        "cost_min": 12,
+        "feasible_at_nominal_budget": true,
+        "weights": [
+          0.7461139896373057,
+          0.2538860103626942
+        ],
+        "mean_C": 22.323834196891188,
+        "variance_C2": 0.13139896373056992,
+        "standard_error_C": 0.3624899498338815,
+        "interval_C": [
+          21.61336695045905,
+          23.034301443323326
+        ]
+      },
+      {
+        "pair": [
+          "A",
+          "D"
+        ],
+        "cost_min": 10,
+        "feasible_at_nominal_budget": true,
+        "weights": [
+          0.868632707774799,
+          0.13136729222520105
+        ],
+        "mean_C": 22.42627345844504,
+        "variance_C2": 0.14640750670241287,
+        "standard_error_C": 0.38263233880895753,
+        "interval_C": [
+          21.676327855059153,
+          23.176219061830924
+        ]
+      },
+      {
+        "pair": [
+          "B",
+          "C"
+        ],
+        "cost_min": 11,
+        "feasible_at_nominal_budget": true,
+        "weights": [
+          0.64,
+          0.36
+        ],
+        "mean_C": 22.484,
+        "variance_C2": 0.1696,
+        "standard_error_C": 0.41182520563948,
+        "interval_C": [
+          21.67683742902082,
+          23.291162570979182
+        ]
+      },
+      {
+        "pair": [
+          "B",
+          "D"
+        ],
+        "cost_min": 9,
+        "feasible_at_nominal_budget": true,
+        "weights": [
+          0.7999999999999999,
+          0.19999999999999998
+        ],
+        "mean_C": 22.679999999999996,
+        "variance_C2": 0.202,
+        "standard_error_C": 0.44944410108488464,
+        "interval_C": [
+          21.799105748809644,
+          23.560894251190348
+        ]
+      },
+      {
+        "pair": [
+          "C",
+          "D"
+        ],
+        "cost_min": 6,
+        "feasible_at_nominal_budget": true,
+        "weights": [
+          0.6923076923076923,
+          0.30769230769230765
+        ],
+        "mean_C": 22.253846153846155,
+        "variance_C2": 0.28923076923076924,
+        "standard_error_C": 0.5378017936291857,
+        "interval_C": [
+          21.19977400751191,
+          23.3079183001804
+        ]
+      }
+    ],
+    "confidence": 0.95,
+    "budget_instrument_min": 12,
+    "best_by_budget": {
+      "10": {
+        "pair": [
+          "A",
+          "D"
+        ],
+        "cost_min": 10,
+        "feasible_at_nominal_budget": true,
+        "weights": [
+          0.868632707774799,
+          0.13136729222520105
+        ],
+        "mean_C": 22.42627345844504,
+        "variance_C2": 0.14640750670241287,
+        "standard_error_C": 0.38263233880895753,
+        "interval_C": [
+          21.676327855059153,
+          23.176219061830924
+        ]
+      },
+      "12": {
+        "pair": [
+          "A",
+          "C"
+        ],
+        "cost_min": 12,
+        "feasible_at_nominal_budget": true,
+        "weights": [
+          0.7461139896373057,
+          0.2538860103626942
+        ],
+        "mean_C": 22.323834196891188,
+        "variance_C2": 0.13139896373056992,
+        "standard_error_C": 0.3624899498338815,
+        "interval_C": [
+          21.61336695045905,
+          23.034301443323326
+        ]
+      },
+      "15": {
+        "pair": [
+          "A",
+          "B"
+        ],
+        "cost_min": 15,
+        "feasible_at_nominal_budget": false,
+        "weights": [
+          0.6230769230769231,
+          0.3769230769230768
+        ],
+        "mean_C": 22.51307692307692,
+        "variance_C2": 0.11632692307692306,
+        "standard_error_C": 0.3410673292429562,
+        "interval_C": [
+          21.84459724145746,
+          23.18155660469638
+        ]
+      }
+    },
+    "gls_check": "All two-channel weights and variances matched matrix GLS at relative tolerance 1e-12."
+  }
+}

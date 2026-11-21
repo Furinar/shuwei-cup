@@ -1,0 +1,157 @@
+{
+  "assumption": "Only order A receives the two-channel check. Both setup times add serially to its basic inspection; none overlap. Channel IDs do not denote order IDs.",
+  "non_dominance_scope": "All channel pairs before imposing the nominal instrument-minute budget. Minimize variance and clearing time. No mixing of discrete choices.",
+  "inputs": [
+    "inspection_inputs.json",
+    "schedule_inputs.json"
+  ],
+  "nominal_budget_instrument_min": 12,
+  "joint_decisions_checked": 720,
+  "independent_check": "Each recurrence makespan verified against the maximum inspection-prefix plus review-suffix sum.",
+  "pairs": [
+    {
+      "channels": "A+B",
+      "setup_min": 15,
+      "variance_C2": 0.11632692307692306,
+      "se_C": 0.3410673292429562,
+      "within_nominal_budget": false,
+      "optimal_makespan_min": 51,
+      "representative_order": [
+        "B",
+        "C",
+        "D",
+        "A",
+        "E"
+      ],
+      "registration_order_makespan_min": 54,
+      "lower_bound_min": 51,
+      "makespan_optima_count": 10,
+      "permutations_checked": 120,
+      "dominated_by": []
+    },
+    {
+      "channels": "A+C",
+      "setup_min": 12,
+      "variance_C2": 0.13139896373056992,
+      "se_C": 0.3624899498338815,
+      "within_nominal_budget": true,
+      "optimal_makespan_min": 48,
+      "representative_order": [
+        "B",
+        "C",
+        "D",
+        "A",
+        "E"
+      ],
+      "registration_order_makespan_min": 51,
+      "lower_bound_min": 48,
+      "makespan_optima_count": 10,
+      "permutations_checked": 120,
+      "dominated_by": []
+    },
+    {
+      "channels": "A+D",
+      "setup_min": 10,
+      "variance_C2": 0.14640750670241287,
+      "se_C": 0.38263233880895753,
+      "within_nominal_budget": true,
+      "optimal_makespan_min": 46,
+      "representative_order": [
+        "B",
+        "C",
+        "D",
+        "A",
+        "E"
+      ],
+      "registration_order_makespan_min": 49,
+      "lower_bound_min": 46,
+      "makespan_optima_count": 10,
+      "permutations_checked": 120,
+      "dominated_by": []
+    },
+    {
+      "channels": "B+C",
+      "setup_min": 11,
+      "variance_C2": 0.1696,
+      "se_C": 0.41182520563948,
+      "within_nominal_budget": true,
+      "optimal_makespan_min": 47,
+      "representative_order": [
+        "B",
+        "C",
+        "D",
+        "A",
+        "E"
+      ],
+      "registration_order_makespan_min": 50,
+      "lower_bound_min": 47,
+      "makespan_optima_count": 10,
+      "permutations_checked": 120,
+      "dominated_by": [
+        "A+D"
+      ]
+    },
+    {
+      "channels": "B+D",
+      "setup_min": 9,
+      "variance_C2": 0.202,
+      "se_C": 0.44944410108488464,
+      "within_nominal_budget": true,
+      "optimal_makespan_min": 45,
+      "representative_order": [
+        "B",
+        "C",
+        "D",
+        "A",
+        "E"
+      ],
+      "registration_order_makespan_min": 48,
+      "lower_bound_min": 45,
+      "makespan_optima_count": 10,
+      "permutations_checked": 120,
+      "dominated_by": []
+    },
+    {
+      "channels": "C+D",
+      "setup_min": 6,
+      "variance_C2": 0.28923076923076924,
+      "se_C": 0.5378017936291857,
+      "within_nominal_budget": true,
+      "optimal_makespan_min": 42,
+      "representative_order": [
+        "B",
+        "C",
+        "D",
+        "A",
+        "E"
+      ],
+      "registration_order_makespan_min": 45,
+      "lower_bound_min": 42,
+      "makespan_optima_count": 10,
+      "permutations_checked": 120,
+      "dominated_by": []
+    }
+  ],
+  "unrestricted_frontier": [
+    "C+D",
+    "B+D",
+    "A+D",
+    "A+C",
+    "A+B"
+  ],
+  "best_precision_with_nominal_budget_and_deadline": [
+    {
+      "deadline_min": 46,
+      "best_channels": "A+D"
+    },
+    {
+      "deadline_min": 48,
+      "best_channels": "A+C"
+    }
+  ],
+  "se_requirement_C": 0.37,
+  "fastest_with_nominal_budget_and_se_requirement": {
+    "channels": "A+C",
+    "makespan_min": 48
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "description": "Synthetic maintenance orders for identified, stationary cabinets. All times are integer minutes.",
+  "process": "Records are issued through one inspection bench then a single FIFO review desk, in the same order with unlimited waiting space. Both resources work at earliest availability; intervals are half-open.",
+  "information": "At zero both policies know only the five base jobs. At the event, the work notice reveals the complete new batch and its standard service times; a planned desk-closure notice specifies its recovery time then. No later shock occurs.",
+  "change_rule": "At the event, inspection jobs whose service has begun strictly before the timestamp are frozen; arrivals exactly at the timestamp precede new service decisions. Keeping appends arrivals in the announced order. A changed queue occupies the inspection bench for two minutes at its first free time at or after the notice, before starting any unfrozen work. An active review pauses over closure and resumes first.",
+  "score_rule": "Maximize the number completing both stages by the inclusive deadline, then minimize actual all-job clearing time. On an exact tie retain the old queue, then minimize summed completion times, then compare job IDs lexicographically. window_tlast_min is an auxiliary capped measure set to the deadline when any job is unfinished.",
+  "inspection_review_minutes": {
+    "A": [11, 3], "B": [3, 10], "C": [9, 5], "D": [5, 8], "E": [6, 2],
+    "F": [2, 3], "G": [5, 6]
+  },
+  "initial_order": ["A", "B", "C", "D", "E"],
+  "event_min": 8,
+  "window_end_min": 36,
+  "changeover_min": 2,
+  "changeover_sensitivity": {"scenario": "S3", "minutes": [0, 2, 4, 6, 8, 10, 14, 15]},
+  "scenarios": [
+    {"id": "S0", "label": "Control", "added": [], "review_outage_min": 0},
+    {"id": "S1", "label": "One new order", "added": ["F"], "review_outage_min": 0},
+    {"id": "S2", "label": "8-min outage", "added": [], "review_outage_min": 8},
+    {"id": "S3", "label": "One order + 8-min outage", "added": ["F"], "review_outage_min": 8},
+    {"id": "S4", "label": "Two new orders", "added": ["F","G"], "review_outage_min": 0},
+    {"id": "S5", "label": "Two orders + 12-min outage", "added": ["F","G"], "review_outage_min": 12}
+  ]
+}

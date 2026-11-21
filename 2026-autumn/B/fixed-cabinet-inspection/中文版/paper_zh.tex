@@ -1,0 +1,97 @@
+% !TeX program = xelatex
+\AddToHook{class/article/after}{\RequirePackage{xeCJK}}
+\documentclass{swmcmthesis}
+\usepackage{float,indentfirst,etoolbox}
+\setCJKmainfont[BoldFont=FandolSong-Bold.otf,ItalicFont=FandolKai-Regular.otf,BoldItalicFont=FandolSong-Bold.otf]{FandolSong-Regular.otf}
+\setCJKsansfont[BoldFont=FandolHei-Bold.otf]{FandolHei-Regular.otf}
+\setCJKmonofont{FandolFang-Regular.otf}
+\AtEndPreamble{\defaultfontfeatures{Ligatures=TeX}\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{TeX Gyre Termes}}}
+\AtBeginDvi{\special{pdf:mapfile +newtx.map}}
+\setlength{\headheight}{20pt}
+\setlength{\parindent}{2em}
+\setlength{\intextsep}{8pt plus 2pt minus 1pt}
+\setlength{\textfloatsep}{10pt plus 2pt minus 1pt}
+\linespread{1.18}
+\captionsetup{skip=5pt}
+\setcounter{tocdepth}{2}
+\newcommand{\code}[1]{\texttt{\detokenize{#1}}}
+\input{tables_zh.tex}
+\input{../tradeoff_rows.tex}
+
+\title{固定机柜巡检的测量公差与工单排程决策}
+\baominghao{个人练习}
+\zubie{B 题改编}
+\date{2026}
+\abstract{检修车间能保证多高的测量精度？为此需要占用工位多长时间？本文以数维杯 B 题为背景，另行构造固定机柜巡检算例，研究铭牌拍摄、双通道测温、固定参考标记的角度标定，以及检测与复核两个工位上的工单排程。
+\par\medskip
+理想夹具下，相机居中、距铭牌 30\,cm 时，宽 24\,cm 的铭牌可完整入镜，且成像最宽。若轴向和横向各允许 1\,cm 的定位误差，最优标称距离变为 31\,cm，此时能保证铭牌像宽至少为 623.54 像素。五张基础工单的检测共需 34 分钟，末单还需至少 2 分钟复核；所选队列恰在第 36 分钟清空，达到理论下界。若其中一张工单还需占用检测工位测温，要求 46 分钟内清空队列时应选通道 A 和 D；期限放宽至 48 分钟时，可选精度更高的 A 和 C。在另一组固定参考距离为 40\,m 的标定试验中，对圆周角误差分布积分，得到满足 95\% 容差命中率的累计移动距离上限为 66.84\,m，直接模拟也验证了这一结果。
+\par\medskip
+若复核台停机时新增一张工单，且维修时长未知，设其在 4 至 16 分钟的整数中等概率取值。在收到通知时一次性确定新顺序，可使六张工单中在第 36 分钟前（含该时刻）完成的期望数量由 3.00 单增加至 4.31 单，代价是全部工单的平均清空时刻推迟 2.69 分钟。若维修只需 4 或 5 分钟，两种策略按期完成的数量相同，保留原序早 7 分钟清空。若每多按期交付一单可接受的清空延迟介于 \(5/12\) 和 6 分钟之间，24 条可行队列中的最优选择是第三条队列，平均按期交付 3.92 单，在第 44.46 分钟清空。}
+\keywords{巡检几何，测量不确定度，角度误差，流水车间调度}
+\begin{document}
+\makeatletter
+\renewcommand{\swmcm@commit@string@problemchosen}{选题}
+\renewcommand{\swmcm@commit@string@signupnum}{文稿用途}
+\renewcommand{\swmcm@numberpage@string@titlea}{数维杯}
+\renewcommand{\swmcm@numberpage@string@sumsheet}{数学建模练习}
+\renewcommand{\swmcm@numberpage@string@summary}{摘要}
+\renewcommand{\swmcm@cap@keywordsname}{关键词\quad}
+\patchcmd{\tableofcontents}{\addcontentsline{toc}{section}{Content}}{}{}{}
+\makeatother
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+\renewcommand{\refname}{参考文献}
+\renewcommand{\contentsname}{目录}
+\hypersetup{pdftitle={固定机柜巡检的测量公差与工单排程决策},pdfsubject={固定设施巡检修订稿中文版}}
+\maketitle
+\lhead{固定机柜巡检}
+\rhead{第 \thepage\ 页，共 \pageref{LastPage} 页}
+\tableofcontents
+\clearpage
+
+\section{问题背景与数据}
+检修车间接收来自不同固定机柜的工单，每台机柜均有唯一编号。每张工单先在检测工位处理，再送复核台签核。铭牌拍摄使用近距离相机夹具；测温通道使用共同的温度基准进行校准；另一台仪器则利用远处的固定标记进行角度标定。三种测量的工作距离与误差来源各不相同。
+
+\begin{table}[H]\centering
+\caption{各分问的决策对象与验证依据}
+\begin{tabular}{@{}p{.09\linewidth}p{.34\linewidth}p{.46\linewidth}@{}}
+\toprule
+分问 & 决策或待求量 & 验证依据\\ \midrule
+一 & 相机距离与横向偏移 & 夹具合格区域面积、像宽与网格复核\\
+二（1） & 两个测温通道的组合 & 全部六种配对的比较及温度估计的置信区间\\
+二（2） & 初始工单处理顺序 & 两个工位的时间线及清空时刻的理论下界\\
+三 & 给定角度容差下允许的误差尺度 & 数值积分、一阶近似与直接模拟\\
+四 & 保留或调整待处理工单的顺序 & 相同初始状态、六种事件情景及逐段回放\\
+\bottomrule
+\end{tabular}
+\end{table}
+原 B 题研究多车协同观测无人机。本文将应用场景改为固定机柜检修，铭牌拍摄、测温和工单排程均为另行设计的练习任务。夹具行程、温度读数、工单工时与扰动情景均为构造数据，具体取值列在配套 JSON 文件中。角度标定试验沿用原赛题第三问的 40\,m 参考距离、高斯误差参数与概率要求\cite{source}。除另有说明，长度以米计，工位时间以分钟计；三角函数计算采用弧度。
+
+下文先求解四问的基础情景，再考察三项足以改变决策的假设：夹具存在定位误差，测温准备占用共享检测工位，维修时长直至复核台恢复时才可知。各扩展试验均以文中给定的基础条件为起点。测温时先根据不确定度和准备成本选通道，再使用相应读数。排程对照中，两种策略起初接收相同的五张工单，在零时刻均不知道后续是否会新增 F 或 G。
+
+\clearpage
+\input{measurement.tex}
+\clearpage
+\input{calibration_schedule.tex}
+\clearpage
+
+\section{结论}
+巡检方案取决于车间实际能够控制哪些条件。轴向和横向都允许 1\,cm 的安装公差时，相机的最优标称距离应调至 31\,cm。将清空期限从 46 分钟放宽到 48 分钟，便可把测温通道从 A+D 换为精度更高的 A+C。维修期间若新增一单，每多按期交付一单可接受的清空延迟在 \(5/12\) 至 6 分钟之间时，应把 E、F 提前，并把 D 排在 A 前。与保留原序相比，这条折中队列平均只晚 0.38 分钟清空，却平均多交付 0.92 单。
+
+这些结论的适用范围由输入条件决定。在给定几何关系、高斯误差规律与工单工时后，数值计算和枚举可以复现上述决策。若要判断它们是否适用于真实车间，应重复测量夹具的实际位置，采集附有正确文字标注的铭牌照片，并记录带时间戳的工位占用与维修过程。再用后续班次的数据检验预测的容差命中率和工单完成情况，才能判断现场是否满足数值回放所依据的假设。
+
+\begin{thebibliography}{9}
+\bibitem{source} 数维杯组委会．2026 年秋季赛 B 题，第三问，第 4--5 页．本文角度标定参数的来源。
+\bibitem{johnson} S. M. Johnson. Optimal two- and three-stage production schedules with setup times included. \emph{Naval Research Logistics Quarterly}, 1, 61--68, 1954. \url{https://doi.org/10.1002/nav.3800010110}.
+\bibitem{theta} 美国国家标准与技术研究院（NIST）．\emph{Digital Library of Mathematical Functions}，第 20.5(i) 节，式 20.5.3，雅可比三重乘积公式．\url{https://dlmf.nist.gov/20.5.E3}。
+\bibitem{wilson} NIST/SEMATECH．\emph{e-Handbook of Statistical Methods}，第 7.2.4.1 节，置信区间．\url{https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm}。
+\end{thebibliography}
+\subsection*{计算与复现}
+配套材料包含算例输入、六个数值计算脚本、计算结果、图表、表格生成程序和可编辑的论文源文件。OpenAI Codex 参与了练习数据的构造、计算和论文撰写。在主项目目录运行 \code{python reproduce.py} 可重新生成数值结果并编译英文修订稿；运行 \code{python reproduce.py --verify} 可校验文件哈希。中文解读文档列有运行环境和详细命令。中文版使用同一组数值结果，在中文版目录以 XeLaTeX 编译 \code{paper_zh.tex} 即可排版。
+
+\clearpage
+\section*{附录　工位时间线}
+\addcontentsline{toc}{section}{附录　工位时间线}
+下表均从初始工单发布时刻起算，单位为分钟。每一行给出一张工单在两种策略下经过检测工位和复核台的时间段。若复核区间分成两段，分别表示停机前与恢复后完成的工作。采用新顺序时，表中情景的检测工位均在 \([12,14)\) 分钟用于切换队列。各段之间的空档表示工位空闲或停用。
+\AuditAppendix
+\end{document}
